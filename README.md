@@ -87,4 +87,10 @@ Propose a term, a synonym or a correction through this repository's issue forms.
 
 Cite the ontology as https://w3id.org/cxso, and a specific release by its version IRI or Zenodo DOI. `CITATION.cff` holds the citation.
 
+## Use of AI tools
+
+The author used AI assistants for drafting, file conversion, consistency checks and locating primary sources. Every conceptual decision, definition and change was made or approved by the author. The author takes full responsibility for the content.
+
+The paper (version 2.3) carries the full statement, under "Use of AI Tools".
+
 CATHEXIS is a trademark of Justin DeGarbo.
