@@ -6,11 +6,12 @@ from fhir.resources.R4B.codesystem import CodeSystem
 from fhir.resources.R4B.valueset import ValueSet
 from fhir.resources.R4B.structuredefinition import StructureDefinition
 from fhir.resources.R4B.observation import Observation
+from fhir.resources.R4B.patient import Patient
 from fhirpathpy import evaluate
 from fhirpathpy.models import models as FP_MODELS
 R4 = FP_MODELS['r4']
 D = sys.argv[1]
-MODELS = {"CodeSystem": CodeSystem, "ValueSet": ValueSet, "StructureDefinition": StructureDefinition, "Observation": Observation}
+MODELS = {"CodeSystem": CodeSystem, "ValueSet": ValueSet, "StructureDefinition": StructureDefinition, "Observation": Observation, "Patient": Patient}
 files = sorted(glob.glob(os.path.join(D, "input/resources/*.json")) + glob.glob(os.path.join(D, "fsh-generated/resources/*.json")))
 bad = 0
 for f in files:

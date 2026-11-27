@@ -33,4 +33,4 @@ jobs:
       - name: Validate with the HL7 FHIR validator
         run: |
           curl -sSL -o validator_cli.jar https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar
-          java -jar validator_cli.jar -version 4.0.1 -tx n/a -ig fhir/input/resources -ig fhir/fsh-generated/resources fhir/fsh-generated/resources/Observation-*.json
+          java -jar validator_cli.jar -version 4.0.1 -tx n/a -ig fhir/input/resources -ig fhir/fsh-generated/resources fhir/fsh-generated/resources/Observation-*.json fhir/fsh-generated/resources/Patient-*.json

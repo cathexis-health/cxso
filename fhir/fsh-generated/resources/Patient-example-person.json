@@ -1,0 +1,13 @@
+{
+  "resourceType": "Patient",
+  "id": "example-person",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Example person, used only in the CSO examples. Not a real person.</p></div>"
+  },
+  "name": [
+    {
+      "text": "Example person"
+    }
+  ]
+}
