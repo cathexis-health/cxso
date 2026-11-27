@@ -1,0 +1,8 @@
+@prefix cxso: <https://w3id.org/cxso/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://example.org/> .
+
+# A retired v1.1 identifier is not a live zone.
+@prefix cso11: <https://cathexis.health/ontology/cso/v1.1/> .
+ex:s1 a cxso:CXSO_0000003 ; cxso:CXSO_0000174 "2026-11-26T08:30:00-08:00"^^xsd:dateTime ; cxso:CXSO_0000216 ex:p1 .
+ex:p1 a cxso:CXSO_0000002 ; cxso:CXSO_0000158 cso11:upperChest ; cxso:CXSO_0000159 cxso:CXSO_0000041 .

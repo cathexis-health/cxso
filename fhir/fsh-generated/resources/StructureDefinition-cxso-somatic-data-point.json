@@ -1,0 +1,227 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cxso-somatic-data-point",
+  "url": "https://w3id.org/cxso/fhir/StructureDefinition/cxso-somatic-data-point",
+  "version": "2.0.0",
+  "name": "CXSOSomaticDataPoint",
+  "title": "CSO somatic data point",
+  "status": "active",
+  "description": "A single sensation report in the Cathexis Somatic Ontology: where it is felt (a CSO zone, in bodySite), what it is like (a CSO sensation quality, in value), and optionally how intense it is (a whole number from 0 to 10). Release 2.0.0.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.category:survey",
+        "path": "Observation.category",
+        "sliceName": "survey",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "survey",
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "CXSO:0000002",
+              "system": "https://w3id.org/cxso",
+              "display": "Somatic Data Point"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://w3id.org/cxso/fhir/ValueSet/qualities"
+        }
+      },
+      {
+        "id": "Observation.bodySite",
+        "path": "Observation.bodySite",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://w3id.org/cxso/fhir/ValueSet/zones"
+        }
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "code"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Observation.component:intensity",
+        "path": "Observation.component",
+        "sliceName": "intensity",
+        "min": 0,
+        "max": "1",
+        "constraint": [
+          {
+            "key": "cxso-intensity",
+            "severity": "error",
+            "human": "Intensity is a whole number from 0 to 10.",
+            "expression": "value.ofType(integer).all($this >= 0 and $this <= 10)",
+            "source": "https://w3id.org/cxso/fhir/StructureDefinition/cxso-somatic-data-point"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:intensity.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "CXSO:0000163",
+              "system": "https://w3id.org/cxso",
+              "display": "intensity"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:intensity.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:evidenceKind",
+        "path": "Observation.component",
+        "sliceName": "evidenceKind",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:evidenceKind.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "CXSO:0000175",
+              "system": "https://w3id.org/cxso",
+              "display": "has evidence kind"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:evidenceKind.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://w3id.org/cxso/fhir/ValueSet/evidence-kinds"
+        }
+      },
+      {
+        "id": "Observation.component:hesLayer",
+        "path": "Observation.component",
+        "sliceName": "hesLayer",
+        "short": "HES layer (clinical extension)",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:hesLayer.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "CXSO:0000189",
+              "system": "https://w3id.org/cxso",
+              "display": "has HES layer"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:hesLayer.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://w3id.org/cxso/fhir/ValueSet/hes-layers"
+        }
+      }
+    ]
+  }
+}

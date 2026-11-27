@@ -1,0 +1,85 @@
+{
+  "resourceType": "Observation",
+  "id": "example-point-upper-chest",
+  "meta": {
+    "profile": [
+      "https://w3id.org/cxso/fhir/StructureDefinition/cxso-somatic-data-point"
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "survey",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "CXSO:0000002",
+        "system": "https://w3id.org/cxso",
+        "display": "Somatic Data Point"
+      }
+    ]
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "CXSO:0000163",
+            "system": "https://w3id.org/cxso",
+            "display": "intensity"
+          }
+        ]
+      },
+      "valueInteger": 6
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "CXSO:0000175",
+            "system": "https://w3id.org/cxso",
+            "display": "has evidence kind"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "CXSO:0000176",
+            "system": "https://w3id.org/cxso",
+            "display": "Said by the person"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "final",
+  "subject": {
+    "display": "Example person"
+  },
+  "effectiveDateTime": "2026-11-26T08:30:00-08:00",
+  "bodySite": {
+    "coding": [
+      {
+        "code": "CXSO:0000020",
+        "system": "https://w3id.org/cxso",
+        "display": "Upper Chest"
+      }
+    ]
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "CXSO:0000041",
+        "system": "https://w3id.org/cxso",
+        "display": "Tightness"
+      }
+    ]
+  }
+}

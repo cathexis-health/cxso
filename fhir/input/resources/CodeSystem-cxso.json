@@ -1,0 +1,5012 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "cxso",
+  "url": "https://w3id.org/cxso",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:doi:10.5281/zenodo.18859896"
+    }
+  ],
+  "name": "CXSO",
+  "title": "Cathexis Somatic Ontology (CSO)",
+  "version": "2.0.0",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-11-26",
+  "publisher": "Cathexis Health LLC",
+  "contact": [
+    {
+      "name": "Justin DeGarbo"
+    }
+  ],
+  "copyright": "Cathexis Somatic Ontology (CSO), release 2.0.0. Justin DeGarbo / Cathexis Health LLC. CC BY 4.0: https://creativecommons.org/licenses/by/4.0/",
+  "description": "The CSO's permanent codes for first-person somatic experience: zones, sensation qualities, evidence kinds, the clinical extension's terms, and the classes and properties that structure a report. Codes carry no meaning and are never reused. Generated from cxso.ttl.",
+  "caseSensitive": true,
+  "hierarchyMeaning": "grouped-by",
+  "content": "complete",
+  "count": 217,
+  "property": [
+    {
+      "code": "kind",
+      "description": "class, property or individual in the ontology",
+      "type": "code"
+    },
+    {
+      "code": "status",
+      "uri": "http://hl7.org/fhir/concept-properties#status",
+      "description": "active or retired",
+      "type": "code"
+    },
+    {
+      "code": "deprecated",
+      "uri": "http://hl7.org/fhir/concept-properties#deprecated",
+      "description": "retired and kept so older data stays readable",
+      "type": "boolean"
+    },
+    {
+      "code": "replacedBy",
+      "description": "the live code that replaces a retired one",
+      "type": "code"
+    },
+    {
+      "code": "parent",
+      "uri": "http://hl7.org/fhir/concept-properties#parent",
+      "description": "the class a term belongs to",
+      "type": "code"
+    },
+    {
+      "code": "notation",
+      "description": "the short form used in practice, such as Zone 10 or T1",
+      "type": "string"
+    },
+    {
+      "code": "exactMatch",
+      "description": "UBERON term, exact match",
+      "type": "string"
+    },
+    {
+      "code": "closeMatch",
+      "description": "UBERON term, close match",
+      "type": "string"
+    },
+    {
+      "code": "broadMatch",
+      "description": "UBERON term, broader match",
+      "type": "string"
+    },
+    {
+      "code": "relatedMatch",
+      "description": "UBERON term, related match",
+      "type": "string"
+    }
+  ],
+  "concept": [
+    {
+      "code": "CXSO:0000001",
+      "display": "Somatic Entity",
+      "definition": "The root class for every entity in the Cathexis Somatic Ontology.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000002",
+      "display": "Somatic Data Point",
+      "definition": "A single sensation report: where in the body (zone), what kind (quality), and optionally how intense (a whole number from 0 to 10). The atomic unit of somatic data.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000003",
+      "display": "Somatic Snapshot",
+      "definition": "A complete body state at a single moment. It holds zero or more data points; with none, nothing stands out may record that the person attended to their sensations and found nothing standing out.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000004",
+      "display": "Somatic Trajectory",
+      "definition": "A body state over time: an ordered series of snapshots for one person. Aggregates computed from the series are an implementation concern, not part of the ontology.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000005",
+      "display": "Blanket Component",
+      "definition": "One of the four components of Friston's Markov blanket formalism (internal, external, sensory and active states). The clinical extension uses them to organize the classes that describe a person.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000006",
+      "display": "Internal State",
+      "definition": "The person's physiological and psychological condition as experienced through interoception. What the person builds observer capacity for.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000005"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000007",
+      "display": "External State",
+      "definition": "Environmental conditions influencing internal experience. What the person cannot directly control but must relate to.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000005"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000008",
+      "display": "Sensory State",
+      "definition": "The boundary where external becomes internal: the translation mechanism. Where prediction lives. The most clinically important component.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000005"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000009",
+      "display": "Active State",
+      "definition": "The person's repertoire of responses: actions to minimize prediction error. The intervention library as a toolkit of active states.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000005"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000010",
+      "display": "Body Zone",
+      "definition": "An area of the body where a person reports a sensation. A zone is the area a person reports, not a precise anatomical boundary; it is linked to UBERON where a corresponding structure exists.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000011",
+      "display": "Head / Scalp",
+      "definition": "Tension headaches, pressure, cognitive overwhelm.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 1"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0000033"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0000403"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000012",
+      "display": "Forehead",
+      "definition": "Tension, pressure, furrowing; cognitive strain and worry patterns.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 2"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0008200"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000013",
+      "display": "Eyes",
+      "definition": "Strain, pressure, burning, tears; hypervigilance, crying suppression.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 3"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0000970"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000014",
+      "display": "Jaw / TMJ",
+      "definition": "Clenching, grinding, tightness; RAGE suppression. Clinically informative.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Jaw"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 4"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0003700"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0011595"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000015",
+      "display": "Mouth / Lips",
+      "definition": "Tightness, numbness, trembling; speech suppression, grief expression.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 5"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0000165"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0001833"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000016",
+      "display": "Throat",
+      "definition": "Constriction, lump; suppressed expression across multiple territories.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 6"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0000341"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000017",
+      "display": "Neck (Front)",
+      "definition": "Tightness, vulnerability; exposure anxiety.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 7"
+        },
+        {
+          "code": "broadMatch",
+          "valueString": "UBERON:0000974"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000018",
+      "display": "Neck (Back)",
+      "definition": "Tension, stiffness, bracing; protective posture.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 8"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0012477"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000019",
+      "display": "Shoulders",
+      "definition": "Carrying, tension, elevation; extremely common across territories.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 9"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0001467"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000020",
+      "display": "Upper Chest",
+      "definition": "Tightness, pressure, racing; FEAR system activation, cardiac awareness.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 10"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0001443"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000021",
+      "display": "Solar Plexus",
+      "definition": "Churning, butterflies, knot; core anxiety, diaphragmatic tension.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 11"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0035276"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000022",
+      "display": "Stomach / Abdomen",
+      "definition": "Nausea, churning, sinking; gut-brain axis, visceral distress.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Stomach"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 12"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0000916"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0000945"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000023",
+      "display": "Lower Abdomen / Pelvis",
+      "definition": "Tension, numbness, dissociation; trauma-sensitive zone.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Lower Abdomen"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 13"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0002355"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0013203"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000024",
+      "display": "Upper Back",
+      "definition": "Tension, aching, bracing; protective posture, chronic guarding.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 14"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0008231"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000025",
+      "display": "Lower Back",
+      "definition": "Aching, tension, weakness; structural support anxiety.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 15"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0005462"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000026",
+      "display": "Arms (Upper)",
+      "definition": "Heaviness, weakness, restlessness; reaching, holding and pushing gestures.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 16"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0003822"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000027",
+      "display": "Forearms",
+      "definition": "Tension, tingling, weakness; action readiness or suppression.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 17"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0002386"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000028",
+      "display": "Hands",
+      "definition": "Clenching, tingling, numbness, sweating; highly expressive zone.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 18"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0002398"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000029",
+      "display": "Hips",
+      "definition": "Tightness, restriction; mobility, procedural tension patterns.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 19"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0001464"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000030",
+      "display": "Upper Legs / Thighs",
+      "definition": "Heaviness, tension, restlessness; flight readiness or collapse.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Upper Legs"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 20"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0000376"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000031",
+      "display": "Knees",
+      "definition": "Weakness, instability; structural anxiety. Clinically informative.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 21"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0001465"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000032",
+      "display": "Lower Legs / Calves",
+      "definition": "Heaviness, restlessness, cramping; grounding connection.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Lower Legs"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 22"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0003823"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:8480048"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000033",
+      "display": "Feet",
+      "definition": "Numbness, tingling, groundedness; grounding anchor zone.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 23"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0002387"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000034",
+      "display": "Pelvic Floor",
+      "definition": "Deep guarding, tension, numbness; trauma-sensitive, sexual and attachment associations.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 24"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0008612"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000035",
+      "display": "Vestibular / Balance",
+      "definition": "Dizziness, unsteadiness, groundlessness; dissociative and transition states.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 25"
+        },
+        {
+          "code": "relatedMatch",
+          "valueString": "UBERON:0004681"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000036",
+      "display": "Heart",
+      "definition": "Racing, pounding, skipping; cardiac interoception distinct from chest wall tightness.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 26"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0000948"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000037",
+      "display": "Diaphragm",
+      "definition": "Constriction, catching, restriction; breath holding, autonomic regulation anchor.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 27"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0001103"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000038",
+      "display": "Whole Body / Systemic",
+      "definition": "Non-localizable sensations: diffuse fatigue, buzzing, heaviness. Genuinely systemic sensations that forcing localization would misrepresent.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Whole Body"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 28"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000039",
+      "display": "Unspecified",
+      "definition": "Present but not yet localized. Therapeutically important for people who are developing interoceptive capacity. The ratio of unspecified-to-localized reports over time measures developing body awareness.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Can't Pinpoint"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000010"
+        },
+        {
+          "code": "notation",
+          "valueString": "Zone 29"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000040",
+      "display": "Sensation Quality",
+      "definition": "A phenomenological sensation descriptor. Somatic qualities, not emotional labels. Defined phenomenologically (what it feels like) rather than mechanistically (what causes it).",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000041",
+      "display": "Tightness",
+      "definition": "Constriction, gripping, clenching. FEAR activation, muscular bracing, suppressed expression. Most commonly reported quality across populations.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "clenching"
+        },
+        {
+          "language": "en",
+          "value": "constriction"
+        },
+        {
+          "language": "en",
+          "value": "gripping"
+        },
+        {
+          "language": "en",
+          "value": "knot"
+        },
+        {
+          "language": "en",
+          "value": "stiffness"
+        },
+        {
+          "language": "en",
+          "value": "tense"
+        },
+        {
+          "language": "en",
+          "value": "tension"
+        },
+        {
+          "language": "en",
+          "value": "tight"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000040"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000042",
+      "display": "Heat / Warmth",
+      "definition": "Radiating temperature increase, flushing. RAGE activation, shame response (facial heat), inflammatory processes.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Heat"
+        },
+        {
+          "language": "en",
+          "value": "burning"
+        },
+        {
+          "language": "en",
+          "value": "facial heat"
+        },
+        {
+          "language": "en",
+          "value": "flushing"
+        },
+        {
+          "language": "en",
+          "value": "hot"
+        },
+        {
+          "language": "en",
+          "value": "warm"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000040"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000043",
+      "display": "Cold",
+      "definition": "Temperature decrease, chilling. Dissociative states, withdrawal, circulatory changes in freeze responses.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "chilled"
+        },
+        {
+          "language": "en",
+          "value": "chilly"
+        },
+        {
+          "language": "en",
+          "value": "icy"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000040"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000044",
+      "display": "Pressure",
+      "definition": "Compression, weight, bearing down. Overwhelm, suppressed affect, tension accumulation.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "bearing down"
+        },
+        {
+          "language": "en",
+          "value": "compression"
+        },
+        {
+          "language": "en",
+          "value": "fullness"
+        },
+        {
+          "language": "en",
+          "value": "lump"
+        },
+        {
+          "language": "en",
+          "value": "weight on"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000040"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000045",
+      "display": "Tingling",
+      "definition": "Fine electrical sensation, pins and needles. Autonomic arousal, hyperventilation, peripheral nervous system activation.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "pins and needles"
+        },
+        {
+          "language": "en",
+          "value": "prickling"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000040"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000046",
+      "display": "Numbness",
+      "definition": "Absence of sensation, deadness, blankness. Dissociation, shutdown, protective disconnection from interoceptive signal.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "blank"
+        },
+        {
+          "language": "en",
+          "value": "can't feel it"
+        },
+        {
+          "language": "en",
+          "value": "dead"
+        },
+        {
+          "language": "en",
+          "value": "numb"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000040"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000047",
+      "display": "Pain",
+      "definition": "Sharp, specific, localized nociception. Chronic pain territories, acute somatic distress, body-as-alarm.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "hurting"
+        },
+        {
+          "language": "en",
+          "value": "sharp"
+        },
+        {
+          "language": "en",
+          "value": "stabbing"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000040"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000048",
+      "display": "Heaviness",
+      "definition": "Weight, density, gravitational pull. SEEKING suppression (Living in Shutdown), fatigue, depressive somatization.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "heavy"
+        },
+        {
+          "language": "en",
+          "value": "leaden"
+        },
+        {
+          "language": "en",
+          "value": "weighed down"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000040"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000049",
+      "display": "Lightness",
+      "definition": "Buoyancy, ease. Post-regulation shift, PLAY activation, reduced sympathetic tone.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "buoyant"
+        },
+        {
+          "language": "en",
+          "value": "light"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000040"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000050",
+      "display": "Pulsing",
+      "definition": "Rhythmic beat, throbbing. Cardiovascular awareness, autonomic oscillation, activation pattern.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "beating"
+        },
+        {
+          "language": "en",
+          "value": "pounding"
+        },
+        {
+          "language": "en",
+          "value": "throbbing"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000040"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000051",
+      "display": "Hollowness",
+      "definition": "Emptiness, void, absence of substance. Grief (Living in Loss), existential states (Living in Existential Confrontation), identity emptiness (Living Behind a Mask).",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Hollow"
+        },
+        {
+          "language": "en",
+          "value": "empty"
+        },
+        {
+          "language": "en",
+          "value": "void"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000040"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000052",
+      "display": "Buzzing",
+      "definition": "An electrical hum or fizz. Anxiety activation, restlessness, autonomic hyperarousal.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "electric"
+        },
+        {
+          "language": "en",
+          "value": "fizzing"
+        },
+        {
+          "language": "en",
+          "value": "humming"
+        },
+        {
+          "language": "en",
+          "value": "wired"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000040"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000053",
+      "display": "Nausea",
+      "definition": "Stomach turning, queasiness. Gut-brain axis distress, disgust, overwhelming affect, medication effects.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "churning"
+        },
+        {
+          "language": "en",
+          "value": "queasy"
+        },
+        {
+          "language": "en",
+          "value": "sick to the stomach"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000040"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000054",
+      "display": "Aching",
+      "definition": "Deep, diffuse, persistent discomfort. Chronic tension patterns, grief somatization, sustained stress.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Ache"
+        },
+        {
+          "language": "en",
+          "value": "dull ache"
+        },
+        {
+          "language": "en",
+          "value": "sore"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000040"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000055",
+      "display": "Vibration",
+      "definition": "An inner oscillation felt through a zone, without visible movement. High activation, trauma-related activation, release of accumulated tension.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "thrumming"
+        },
+        {
+          "language": "en",
+          "value": "vibrating"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000040"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000056",
+      "display": "Stillness",
+      "definition": "Calm absence of movement. Living in Shutdown: stillness as arrival, not absence. Living in Existential Confrontation: presence without action. A rare positive signal.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "quiet"
+        },
+        {
+          "language": "en",
+          "value": "settled"
+        },
+        {
+          "language": "en",
+          "value": "still"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000040"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000057",
+      "display": "Expansion",
+      "definition": "Outward-radiating warmth, spaciousness. A positive somatic signal, often during successful regulation. Distinct from Heat / Warmth, which has urgency: expansion is spacious.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "opening"
+        },
+        {
+          "language": "en",
+          "value": "spacious"
+        },
+        {
+          "language": "en",
+          "value": "widening"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000040"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000058",
+      "display": "Contraction",
+      "definition": "Inward-pulling compression. Withdrawal, bracing, protective narrowing. Living in Disconnection, Living in Shame: pulling inward.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "collapsing inward"
+        },
+        {
+          "language": "en",
+          "value": "pulling in"
+        },
+        {
+          "language": "en",
+          "value": "shrinking"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000040"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000059",
+      "display": "Floating",
+      "definition": "Untethered, drifting sensation. Living in an Unfamiliar Life: groundlessness. Living Under Siege: dissociative lightness. Distinct from Lightness, which has buoyancy: floating has no anchor.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "drifting"
+        },
+        {
+          "language": "en",
+          "value": "spacey"
+        },
+        {
+          "language": "en",
+          "value": "unanchored"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000040"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000060",
+      "display": "Trembling",
+      "definition": "Fine involuntary shaking, felt or seen as movement. Somatic discharge: can be regulatory (release after activation) or a sign of distress (Living Under Siege freeze-thaw, Living in Overwhelm spillover).",
+      "designation": [
+        {
+          "language": "en",
+          "value": "quivering"
+        },
+        {
+          "language": "en",
+          "value": "shaking"
+        },
+        {
+          "language": "en",
+          "value": "shivering"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000040"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000061",
+      "display": "Territory of Human Experience",
+      "definition": "A distinct pattern of neurobiological organization. Not a diagnosis; describes how a person's nervous system is currently organized and what that organization feels like from the inside. In Pessoa's terms, a characteristic pattern of dynamic functional coalition formation.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000062",
+      "display": "Living in Threat",
+      "definition": "High-precision threat predictions; ambiguous stimuli interpreted as dangerous.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000061"
+        },
+        {
+          "code": "notation",
+          "valueString": "T1"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000063",
+      "display": "Living in Shutdown",
+      "definition": "Collapsed generative model; predictions of low return suppress approach behavior.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000061"
+        },
+        {
+          "code": "notation",
+          "valueString": "T2"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000064",
+      "display": "Living in Loss",
+      "definition": "The model of the world with the person in it persists after the person is gone; prediction errors on absence.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000061"
+        },
+        {
+          "code": "notation",
+          "valueString": "T3"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000065",
+      "display": "Living in Disconnection",
+      "definition": "Relational predictions suppressed; intimacy modeled as dangerous.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000061"
+        },
+        {
+          "code": "notation",
+          "valueString": "T4"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000066",
+      "display": "Living in Overwhelm",
+      "definition": "Multiple high-precision predictions competing simultaneously; regulatory capacity exceeded.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000061"
+        },
+        {
+          "code": "notation",
+          "valueString": "T5"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000067",
+      "display": "Living Under Siege",
+      "definition": "Locked threat predictions with extreme precision; inability to update despite safety.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000061"
+        },
+        {
+          "code": "notation",
+          "valueString": "T6"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000068",
+      "display": "Living in Inner Conflict",
+      "definition": "Contradictory predictions with high precision in opposing directions.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000061"
+        },
+        {
+          "code": "notation",
+          "valueString": "T7"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000069",
+      "display": "Living in the Body Under Strain",
+      "definition": "Brain's pain predictions maintained despite changed peripheral input; pain as construct.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000061"
+        },
+        {
+          "code": "notation",
+          "valueString": "T8"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000070",
+      "display": "Living Under Pressure From Outside",
+      "definition": "Accurate predictions of genuine systemic threat; the stress response is appropriate.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000061"
+        },
+        {
+          "code": "notation",
+          "valueString": "T9"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000071",
+      "display": "Living in an Unfamiliar Life",
+      "definition": "Generative model of self under active reconstruction; predictions temporarily unreliable.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000061"
+        },
+        {
+          "code": "notation",
+          "valueString": "T10"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000072",
+      "display": "Living in Shame",
+      "definition": "Self-model prediction of unworthiness; core identity prediction of defectiveness.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000061"
+        },
+        {
+          "code": "notation",
+          "valueString": "T11"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000073",
+      "display": "Living in Addiction and Compulsion",
+      "definition": "SEEKING system hijacked by a substance or behavior; reward predictions distorted.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000061"
+        },
+        {
+          "code": "notation",
+          "valueString": "T12"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000074",
+      "display": "Living Behind a Mask",
+      "definition": "False-self predictions maintained; authentic predictions suppressed.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000061"
+        },
+        {
+          "code": "notation",
+          "valueString": "T13"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000075",
+      "display": "Living in a World Built for Someone Else",
+      "definition": "Sensory processing differences; predictions calibrated to atypical neurology.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000061"
+        },
+        {
+          "code": "notation",
+          "valueString": "T14"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000076",
+      "display": "Living in Existential Confrontation",
+      "definition": "Confrontation with predictions that cannot be resolved: mortality, meaning, freedom.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000061"
+        },
+        {
+          "code": "notation",
+          "valueString": "T15"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000077",
+      "display": "Living With a Changing Brain",
+      "definition": "Memory systems themselves degrading; predictions increasingly unreliable. Procedural memory is the most resilient system.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000061"
+        },
+        {
+          "code": "notation",
+          "valueString": "T16"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000078",
+      "display": "Blanket Configuration",
+      "definition": "A characteristic pattern of Markov blanket organization shared by related territories.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000079",
+      "display": "Porosity pattern",
+      "definition": "A blanket organization in which sensory translations are overactive: the boundary is too thin.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000078"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000080",
+      "display": "Rigidity pattern",
+      "definition": "A blanket organization in which sensory signals are suppressed: the boundary is too thick.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000078"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000081",
+      "display": "Boundary pattern",
+      "definition": "A blanket organization in which the boundary is distorted: it is misshapen.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000078"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000082",
+      "display": "Damage pattern",
+      "definition": "A blanket organization in which the boundary is ruptured: it is torn.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000078"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000083",
+      "display": "Existential / Neurological pattern",
+      "definition": "A blanket organization in which predictions may be accurate, or cannot be tested.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "Existential / Neurological"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000078"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000084",
+      "display": "Primary Affect System",
+      "definition": "One of Panksepp's seven genetically encoded primary affect systems with distinct neural circuitry.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000085",
+      "display": "SEEKING",
+      "definition": "Dopaminergic motivation, exploration, curiosity. Suppression is a hallmark of Living in Shutdown.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000084"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000086",
+      "display": "FEAR",
+      "definition": "Threat detection and defensive behavior. The primary driver of Living in Threat. Locked activation of this system is central to Living Under Siege.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000084"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000087",
+      "display": "RAGE",
+      "definition": "Frustration, assertive response. Suppressed RAGE appears as jaw tension.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000084"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000088",
+      "display": "PANIC/GRIEF",
+      "definition": "Separation distress, attachment. Primary system in Living in Loss. Suppressed in Living in Disconnection.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000084"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000089",
+      "display": "CARE",
+      "definition": "Nurturing, bonding. Suppression indicates relational territory involvement.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000084"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000090",
+      "display": "PLAY",
+      "definition": "Social learning, joy, boundary-testing. Suppression is a sensitive clinical marker across all territories.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000084"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000091",
+      "display": "LUST",
+      "definition": "Sexual motivation. Relevant to Living in Disconnection, Living Under Siege, and relational territories.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000084"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000092",
+      "display": "Brain Region",
+      "definition": "An anatomical structure of the brain named by the neural layer of the HES. Each region is linked to its term in UBERON, the standard anatomy ontology, with skos:exactMatch, or skos:closeMatch where the match is not exact. The CSO does not define brain anatomy. UBERON does.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000093",
+      "display": "Ventromedial Prefrontal / Orbitofrontal Cortex",
+      "definition": "A brain region: the ventromedial prefrontal and orbitofrontal cortex, named by the neural layer of the HES.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000092"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0004167"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000094",
+      "display": "Anterior Cingulate Cortex",
+      "definition": "A brain region: the anterior cingulate cortex, named by the neural layer of the HES.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000092"
+        },
+        {
+          "code": "exactMatch",
+          "valueString": "UBERON:0009835"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000095",
+      "display": "Posterior Cingulate Cortex / Precuneus",
+      "definition": "A brain region: the posterior cingulate cortex and precuneus, named by the neural layer of the HES.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000092"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0006093"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0022353"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000096",
+      "display": "Hippocampus",
+      "definition": "A brain region: the hippocampus, named by the neural layer of the HES.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000092"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0002421"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000097",
+      "display": "Thalamus",
+      "definition": "A brain region: the thalamus, named by the neural layer of the HES.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000092"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0001897"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000098",
+      "display": "Amygdala",
+      "definition": "A brain region: the amygdala, named by the neural layer of the HES.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000092"
+        },
+        {
+          "code": "exactMatch",
+          "valueString": "UBERON:0001876"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000099",
+      "display": "Anterior Insula",
+      "definition": "A brain region: the anterior insula, named by the neural layer of the HES.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000092"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0034891"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000100",
+      "display": "Posterior Insula",
+      "definition": "A brain region: the posterior insula, named by the neural layer of the HES.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000092"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0034891"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000101",
+      "display": "Somatosensory Cortex",
+      "definition": "A brain region: the somatosensory cortex, named by the neural layer of the HES.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000092"
+        },
+        {
+          "code": "exactMatch",
+          "valueString": "UBERON:0008930"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000102",
+      "display": "Hypothalamus",
+      "definition": "A brain region: the hypothalamus, named by the neural layer of the HES.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000092"
+        },
+        {
+          "code": "exactMatch",
+          "valueString": "UBERON:0001898"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000103",
+      "display": "Brainstem",
+      "definition": "A brain region: the brainstem, including the periaqueductal gray, the nucleus of the solitary tract and the raphe nuclei, named by the neural layer of the HES.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000092"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0002298"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000104",
+      "display": "Dorsolateral Prefrontal Cortex",
+      "definition": "A brain region: the dorsolateral prefrontal cortex, named by the neural layer of the HES.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000092"
+        },
+        {
+          "code": "exactMatch",
+          "valueString": "UBERON:0009834"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000105",
+      "display": "Temporal Pole",
+      "definition": "A brain region: the temporal pole, named by the neural layer of the HES.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000092"
+        },
+        {
+          "code": "exactMatch",
+          "valueString": "UBERON:0002576"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000106",
+      "display": "Lateral Temporal Cortex",
+      "definition": "A brain region: the lateral temporal cortex, named by the neural layer of the HES.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000092"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0016538"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000107",
+      "display": "Parietal Cortex",
+      "definition": "A brain region: the parietal cortex, named by the neural layer of the HES.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000092"
+        },
+        {
+          "code": "exactMatch",
+          "valueString": "UBERON:0016530"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000108",
+      "display": "Occipital Cortex",
+      "definition": "A brain region: the occipital cortex, named by the neural layer of the HES.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000092"
+        },
+        {
+          "code": "exactMatch",
+          "valueString": "UBERON:0016540"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000109",
+      "display": "Motor / Premotor Cortex",
+      "definition": "A brain region: the primary motor and premotor cortex, named by the neural layer of the HES.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000092"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0001384"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0016634"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000110",
+      "display": "Basal Ganglia",
+      "definition": "A brain region: the basal ganglia, including the nucleus accumbens, caudate and putamen, named by the neural layer of the HES.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000092"
+        },
+        {
+          "code": "closeMatch",
+          "valueString": "UBERON:0010011"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000111",
+      "display": "Cerebellum",
+      "definition": "A brain region: the cerebellum, named by the neural layer of the HES.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000092"
+        },
+        {
+          "code": "exactMatch",
+          "valueString": "UBERON:0002037"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000112",
+      "display": "Brain Network",
+      "definition": "A functional system of interacting brain regions, as described in the research the HES draws on. Networks are concepts of the theory, not anatomical structures, so the CSO defines them itself.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000113",
+      "display": "Default Mode Network",
+      "definition": "Self-referential processing, autobiographical memory, mind-wandering, future simulation. Active during rest. Overactive in rumination (Living in Shutdown).",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000112"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000114",
+      "display": "Salience Network",
+      "definition": "Detects what matters: threat, novelty, reward, social significance. The switchboard that routes attention between internal and external processing.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000112"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000115",
+      "display": "Central Executive Network",
+      "definition": "Cognitive control, working memory, goal-directed behavior, strategic planning.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000112"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000116",
+      "display": "Interoceptive Network",
+      "definition": "Body signal processing. Where the body's internal state becomes conscious felt experience.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000112"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000117",
+      "display": "Threat / Fear Circuit",
+      "definition": "Rapid threat detection and defensive response. Panksepp's FEAR system plus cortical monitoring.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000112"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000118",
+      "display": "Reward / Motivation Network",
+      "definition": "Panksepp's SEEKING system. Dopaminergic circuits that drive exploration, engagement, and approach behavior.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000112"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000119",
+      "display": "Social Brain Network",
+      "definition": "Social cognition: reading faces, voices, intentions, and relational context. Models other minds and tracks social dynamics.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000112"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000120",
+      "display": "Memory Consolidation Network",
+      "definition": "Consolidates experience into durable learning and contextualizes the present with the past. Active during reconsolidation and model updating.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000112"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000121",
+      "display": "Attachment / Loss Network",
+      "definition": "Panksepp's PANIC/GRIEF circuitry. Processes separation distress, proximity-seeking, and the somatic weight of loss (Living in Loss, Living in Disconnection).",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000112"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000122",
+      "display": "PLAY Network",
+      "definition": "Panksepp's PLAY system. Social joy, spontaneity, and boundary-testing. Suppression is a cross-territory marker of chronic strain; its return marks recovery.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000112"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000123",
+      "display": "Somatomotor Network",
+      "definition": "Motor execution, body schema, proprioception. The action network, engaged by movement-based regulation practices.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000112"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000124",
+      "display": "Bronfenbrenner Layer",
+      "definition": "An ecological systems layer from Bronfenbrenner's developmental ecology. Used to classify external state entities by their proximity and influence type.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000125",
+      "display": "Microsystem",
+      "definition": "Immediate relationships and settings: partner, family, close friends, workplace team, home.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000124"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000126",
+      "display": "Mesosystem",
+      "definition": "Interactions between microsystems: work-family conflict, school-home dynamics.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000124"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000127",
+      "display": "Exosystem",
+      "definition": "Indirect environments that affect the individual: partner's workplace stress, community resources, media.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000124"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000128",
+      "display": "Macrosystem",
+      "definition": "Broad cultural and societal patterns: economic conditions, political climate, cultural norms.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000124"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000129",
+      "display": "Chronosystem",
+      "definition": "Transitions and shifts over time: life transitions, historical events, developmental changes.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000124"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000130",
+      "display": "Change Mechanism",
+      "definition": "A therapeutic change mechanism, each engaging a distinct memory system.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000131",
+      "display": "Memory Reconsolidation",
+      "definition": "Opens and updates emotional memory during the reconsolidation window (approximately 4 to 6 hours).",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000130"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000146"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000132",
+      "display": "New Habit Formation",
+      "definition": "Builds new procedural patterns through repetition and reward.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000130"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000133",
+      "display": "Model Updating",
+      "definition": "Updates explicit beliefs and self-narratives through new information and reflection.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000130"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000134",
+      "display": "Learning Level",
+      "definition": "One of six capacities a person builds. They tend to develop in this order, and each earlier capacity supports the ones after it, but people move between levels and may work on several at once.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000135",
+      "display": "Somatic Awareness",
+      "definition": "The person notices body signals with increasing precision.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "L1: Somatic Awareness"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000134"
+        },
+        {
+          "code": "notation",
+          "valueString": "L1"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000136",
+      "display": "Regulation Capacity",
+      "definition": "The person shifts their own physiological state through practice.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "L2: Regulation Capacity"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000134"
+        },
+        {
+          "code": "notation",
+          "valueString": "L2"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000137",
+      "display": "Pattern Recognition",
+      "definition": "The person recognizes their predictions as predictions.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "L3: Pattern Recognition"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000134"
+        },
+        {
+          "code": "notation",
+          "valueString": "L3"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000138",
+      "display": "Prediction Testing",
+      "definition": "The person tests predictions through action in daily life.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "L4: Prediction Testing"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000134"
+        },
+        {
+          "code": "notation",
+          "valueString": "L4"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000139",
+      "display": "Integration",
+      "definition": "New experience consolidates into an updated self-model.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "L5: Integration"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000134"
+        },
+        {
+          "code": "notation",
+          "valueString": "L5"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000140",
+      "display": "Autonomous Practice",
+      "definition": "The person continues on their own and recognizes early warning signs.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "L6: Autonomous Practice"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000134"
+        },
+        {
+          "code": "notation",
+          "valueString": "L6"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000141",
+      "display": "Intelligence Layer",
+      "definition": "A level of pattern detection over somatic data, from reflecting back what the person reported to predicting what comes next.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000142",
+      "display": "Reactive",
+      "definition": "Pattern detection over internal states only.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "I1: Reactive"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000141"
+        },
+        {
+          "code": "notation",
+          "valueString": "I1"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000143",
+      "display": "Adaptive",
+      "definition": "Pattern detection over internal and external states.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "I2: Adaptive"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000141"
+        },
+        {
+          "code": "notation",
+          "valueString": "I2"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000144",
+      "display": "Pattern",
+      "definition": "Pattern detection over internal, external and sensory states.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "I3: Pattern"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000141"
+        },
+        {
+          "code": "notation",
+          "valueString": "I3"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000145",
+      "display": "Predictive",
+      "definition": "Pattern detection over the full blanket, over time.",
+      "designation": [
+        {
+          "language": "en",
+          "value": "I4: Predictive"
+        }
+      ],
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000141"
+        },
+        {
+          "code": "notation",
+          "valueString": "I4"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000146",
+      "display": "Mechanism Type",
+      "definition": "A type of therapeutic intervention mechanism with defined neurobiological action.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000147",
+      "display": "Autonomic Regulation",
+      "definition": "Shifts autonomic state via parasympathetic or sympathetic modulation.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000146"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000148",
+      "display": "Interoceptive Awareness",
+      "definition": "Builds precision of body signal detection (anterior insular cortex).",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000146"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000149",
+      "display": "Titrated Somatic Contact",
+      "definition": "Titrated contact with somatic activation patterns; controlled nervous system processing.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000146"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000150",
+      "display": "Prediction Error Generation",
+      "definition": "Creates controlled mismatch between prediction and experience.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000146"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000151",
+      "display": "obsolete memoryReconsolidationMechanism",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "retired"
+        },
+        {
+          "code": "deprecated",
+          "valueBoolean": true
+        },
+        {
+          "code": "replacedBy",
+          "valueCode": "CXSO:0000131"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000152",
+      "display": "Interoceptive Exposure",
+      "definition": "Graduated contact with avoided body sensations.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000146"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000153",
+      "display": "Relational Somatic",
+      "definition": "Body awareness in interpersonal context.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000146"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000154",
+      "display": "has blanket component",
+      "definition": "The primary Markov blanket component this entity belongs to.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000155",
+      "display": "has blanket configuration",
+      "definition": "The characteristic blanket organization pattern for a territory.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000156",
+      "display": "primary territories",
+      "definition": "Territories for which a brain region carries the strongest clinical signal.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000157",
+      "display": "Panksepp affects",
+      "definition": "Primary affect systems associated with a brain region.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000158",
+      "display": "zone",
+      "definition": "The anatomical zone where a sensation was reported.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000159",
+      "display": "quality",
+      "definition": "The phenomenological sensation quality reported.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000160",
+      "display": "has change mechanism",
+      "definition": "The primary therapeutic change mechanism for a territory.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000161",
+      "display": "serves territory",
+      "definition": "A mechanism type that serves a specific territory.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000162",
+      "display": "has region",
+      "definition": "A brain network that includes a specific brain region.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000163",
+      "display": "intensity",
+      "definition": "An optional whole-number rating of how intense a sensation is, from 0 (not noticeable) to 10 (the most intense the person can imagine). Used on a data point, and optionally on a snapshot for the body state as a whole.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000164",
+      "display": "is rich club hub",
+      "definition": "Whether this brain region is a Pessoa rich club hub with dense cross-network connectivity.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000165",
+      "display": "anatomical name",
+      "definition": "The neuroanatomical name of a brain region.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000166",
+      "display": "zone number",
+      "definition": "The number of a zone, from 1 to 29, as used in clinical practice (\"Zone 10\").",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000167",
+      "display": "territory number",
+      "definition": "The number of a territory, from 1 to 16, as used in clinical practice (\"T1\").",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000168",
+      "display": "affect configuration",
+      "definition": "The characteristic Panksepp affect system configuration for a territory.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000169",
+      "display": "neural substrate",
+      "definition": "The brain structures in which an affect system's circuitry lies.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000170",
+      "display": "memory system",
+      "definition": "The memory system a change mechanism engages.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000171",
+      "display": "therapeutic direction",
+      "definition": "The direction of therapeutic work for a blanket configuration.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000172",
+      "display": "Evidence Kind",
+      "definition": "How a data point was obtained: said by the person, measured by an instrument, sensed by a device, done in an intervention, or noticed by the system.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000173",
+      "display": "nothing stands out",
+      "definition": "The person attended to their sensations and found nothing standing out. This is a report, distinct from the Numbness quality (a felt absence of sensation) and from a snapshot never taken.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000174",
+      "display": "timestamp",
+      "definition": "The time of a somatic snapshot.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000175",
+      "display": "has evidence kind",
+      "definition": "The kind of evidence by which a data point was obtained.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000176",
+      "display": "Said by the person",
+      "definition": "Obtained as something said by the person.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000172"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000177",
+      "display": "Measured by an instrument",
+      "definition": "Obtained as a measurement by an instrument.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000172"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000178",
+      "display": "Sensed by a device",
+      "definition": "Obtained as something sensed by a device.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000172"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000179",
+      "display": "Done in an intervention",
+      "definition": "Obtained as something done in an intervention.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000172"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000180",
+      "display": "Noticed by the system",
+      "definition": "Obtained as something noticed by the system.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000172"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000181",
+      "display": "Practice Type",
+      "definition": "A practice type names what the person does in an intervention.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000182",
+      "display": "HES Layer",
+      "definition": "One of the ten layers of the Human Experience System (somatic, predictive, affective, neural, memory, relational, ecological, generational, technological, temporal).",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000183",
+      "display": "Risk Mechanism",
+      "definition": "A mechanism of suicide risk, following HEF Chapter 25. The ontology names the mechanisms and defines no thresholds or scores, which remain clinical and implementation decisions.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000184",
+      "display": "Territory Status",
+      "definition": "Whether a territory is currently organizing the person's experience (active) or holds installed predictions that are not currently active (dormant).",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000185",
+      "display": "Prediction",
+      "definition": "An expectation recorded before a period of experience.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000186",
+      "display": "Prediction Check",
+      "definition": "A record of what happened, made after the period a prediction described.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000187",
+      "display": "Prediction Delta",
+      "definition": "The difference between a prediction and a later check.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "class"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000001"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000188",
+      "display": "has practice type",
+      "definition": "The practice type of an intervention: what the person does.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000189",
+      "display": "has HES layer",
+      "definition": "The Human Experience System layer in which a data point occurred.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000190",
+      "display": "has risk mechanism",
+      "definition": "Associates a record with one of the four risk mechanisms.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000191",
+      "display": "has territory status",
+      "definition": "Whether a territory is active or dormant for a person.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000192",
+      "display": "Breathwork",
+      "definition": "Breath-based regulation; exhale-dominant patterns support parasympathetic activity.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000181"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000193",
+      "display": "Body Scan",
+      "definition": "Attention moved through the body, building interoceptive awareness and observer capacity.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000181"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000194",
+      "display": "Grounding",
+      "definition": "Attention anchored in present external sensory input.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000181"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000195",
+      "display": "Bilateral Stimulation",
+      "definition": "Alternating left-right stimulation, such as tapping.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000181"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000196",
+      "display": "Muscular Release",
+      "definition": "Cycles of tension and release that build awareness of the difference between them.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000181"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000197",
+      "display": "Containment",
+      "definition": "Practices that build a felt sense of boundary and limit how much is held at once.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000181"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000198",
+      "display": "Psychoeducation",
+      "definition": "Learning how predictions shape experience and how sensations are constructed; supports model updating.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000181"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000199",
+      "display": "Activation",
+      "definition": "Small movements and contact that raise arousal a little, for states of shutdown, heaviness or flatness (for example Living in Shutdown and Living in Shame), where regulation needs to move upward rather than toward calm.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000181"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000200",
+      "display": "The Somatic Layer",
+      "definition": "The somatic layer of the Human Experience System.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000182"
+        },
+        {
+          "code": "notation",
+          "valueString": "somatic"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000201",
+      "display": "The Predictive Layer",
+      "definition": "The predictive layer of the Human Experience System.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000182"
+        },
+        {
+          "code": "notation",
+          "valueString": "predictive"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000202",
+      "display": "The Affective Layer",
+      "definition": "The affective layer of the Human Experience System.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000182"
+        },
+        {
+          "code": "notation",
+          "valueString": "affective"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000203",
+      "display": "The Neural Layer",
+      "definition": "The neural layer of the Human Experience System.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000182"
+        },
+        {
+          "code": "notation",
+          "valueString": "neural"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000204",
+      "display": "The Memory Layer",
+      "definition": "The memory layer of the Human Experience System.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000182"
+        },
+        {
+          "code": "notation",
+          "valueString": "memory"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000205",
+      "display": "The Relational Layer",
+      "definition": "The relational layer of the Human Experience System.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000182"
+        },
+        {
+          "code": "notation",
+          "valueString": "relational"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000206",
+      "display": "The Ecological Layer",
+      "definition": "The ecological layer of the Human Experience System.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000182"
+        },
+        {
+          "code": "notation",
+          "valueString": "ecological"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000207",
+      "display": "The Generational Layer",
+      "definition": "The generational layer of the Human Experience System.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000182"
+        },
+        {
+          "code": "notation",
+          "valueString": "generational"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000208",
+      "display": "The Technological Layer",
+      "definition": "The technological layer of the Human Experience System.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000182"
+        },
+        {
+          "code": "notation",
+          "valueString": "technological"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000209",
+      "display": "The Temporal Dimension",
+      "definition": "The temporal dimension of the Human Experience System, the tenth of its layers.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000182"
+        },
+        {
+          "code": "notation",
+          "valueString": "temporal"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000210",
+      "display": "Motivation",
+      "definition": "A reason for ending that is specific to the territory, for example \"there's no point\" in Living in Shutdown or \"I'm the problem\" in Living in Shame.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000183"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000211",
+      "display": "FEAR attenuation",
+      "definition": "The biological barrier lowering, so the person is less prevented rather than more motivated; for example metabolic conservation in Living in Shutdown, alcohol in Living in Addiction and Compulsion, dissociation in Living Under Siege.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000183"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000212",
+      "display": "Disinhibition and access to means",
+      "definition": "For example intoxication in Living in Addiction and Compulsion, impulsivity in Living in Overwhelm, or means available in the environment.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000183"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000213",
+      "display": "Isolation",
+      "definition": "The absence of a co-regulating other; for example withdrawal in Living in Disconnection, or the intact mask in Living Behind a Mask that makes a person appear fine.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000183"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000214",
+      "display": "Active",
+      "definition": "Currently organizing the person's experience.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000184"
+        },
+        {
+          "code": "notation",
+          "valueString": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000215",
+      "display": "Dormant",
+      "definition": "Installed predictions not currently active, which a later trigger may activate.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "individual"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        },
+        {
+          "code": "parent",
+          "valueCode": "CXSO:0000184"
+        },
+        {
+          "code": "notation",
+          "valueString": "dormant"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000216",
+      "display": "has data point",
+      "definition": "A data point that is part of a snapshot. A snapshot with nothing stands out set to true has none.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    },
+    {
+      "code": "CXSO:0000217",
+      "display": "has snapshot",
+      "definition": "A snapshot that is part of a trajectory. A trajectory's snapshots are ordered by their timestamps.",
+      "property": [
+        {
+          "code": "kind",
+          "valueCode": "property"
+        },
+        {
+          "code": "status",
+          "valueCode": "active"
+        }
+      ]
+    }
+  ]
+}

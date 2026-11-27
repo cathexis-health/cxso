@@ -1,0 +1,936 @@
+@prefix cxso: <https://w3id.org/cxso/> .
+@prefix cso11: <https://cathexis.health/ontology/cso/v1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+
+cxso:core rdf:type owl:Ontology ;
+    dcterms:creator "Justin DeGarbo" ;
+    dcterms:description "The CSO core: an observation vocabulary for first-person somatic experience that can be used without any clinical theory. Zones, sensation qualities, intensity, time, evidence kind, and the data point, snapshot and trajectory structure."@en ;
+    dcterms:identifier "10.5281/zenodo.18859896" ;
+    dcterms:issued "2026-05-29"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:modified "2026-11-26"^^xsd:date ;
+    dcterms:publisher "Cathexis Health LLC" ;
+    dcterms:title "Cathexis Somatic Ontology (CSO): core"@en ;
+    vann:preferredNamespacePrefix "cxso" ;
+    vann:preferredNamespaceUri "https://w3id.org/cxso/" ;
+    owl:versionIRI <https://w3id.org/cxso/releases/2.0.0/cxso-core.ttl> ;
+    owl:versionInfo "2.0.0" .
+
+# Terms live under permanent codes (CXSO_0000001 onward).
+# Each v1.1 identifier is kept, deprecated, directly after the code that replaces it.
+
+# SomaticEntity -> CXSO_0000001  [core]
+cxso:CXSO_0000001 rdf:type owl:Class ;
+    rdfs:label "Somatic Entity"@en ;
+    skos:prefLabel "Somatic Entity"@en ;
+    skos:definition "The root class for every entity in the Cathexis Somatic Ontology."@en .
+
+cso11:SomaticEntity rdf:type owl:Class ;
+    owl:deprecated true ;
+    rdfs:label "obsolete SomaticEntity"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000001 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# SomaticDataPoint -> CXSO_0000002  [core]
+cxso:CXSO_0000002 rdf:type owl:Class ;
+    rdfs:subClassOf cxso:CXSO_0000001 ;
+    rdfs:label "Somatic Data Point"@en ;
+    skos:prefLabel "Somatic Data Point"@en ;
+    skos:definition "A single sensation report: where in the body (zone), what kind (quality), and optionally how intense (a whole number from 0 to 10). The atomic unit of somatic data."@en .
+
+cso11:SomaticDataPoint rdf:type owl:Class ;
+    owl:deprecated true ;
+    rdfs:label "obsolete SomaticDataPoint"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000002 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# SomaticSnapshot -> CXSO_0000003  [core]
+cxso:CXSO_0000003 rdf:type owl:Class ;
+    rdfs:subClassOf cxso:CXSO_0000001 ;
+    rdfs:label "Somatic Snapshot"@en ;
+    skos:prefLabel "Somatic Snapshot"@en ;
+    skos:definition "A complete body state at a single moment. It holds zero or more data points; with none, nothing stands out may record that the person attended to their sensations and found nothing standing out."@en .
+
+cso11:SomaticSnapshot rdf:type owl:Class ;
+    owl:deprecated true ;
+    rdfs:label "obsolete SomaticSnapshot"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000003 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# SomaticTrajectory -> CXSO_0000004  [core]
+cxso:CXSO_0000004 rdf:type owl:Class ;
+    rdfs:subClassOf cxso:CXSO_0000001 ;
+    rdfs:label "Somatic Trajectory"@en ;
+    skos:prefLabel "Somatic Trajectory"@en ;
+    skos:definition "A body state over time: an ordered series of snapshots for one person. Aggregates computed from the series are an implementation concern, not part of the ontology."@en .
+
+cso11:SomaticTrajectory rdf:type owl:Class ;
+    owl:deprecated true ;
+    rdfs:label "obsolete SomaticTrajectory"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000004 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# BodyZone -> CXSO_0000010  [core]
+cxso:CXSO_0000010 rdf:type owl:Class ;
+    rdfs:subClassOf cxso:CXSO_0000001 ;
+    rdfs:label "Body Zone"@en ;
+    skos:prefLabel "Body Zone"@en ;
+    skos:definition "An area of the body where a person reports a sensation. A zone is the area a person reports, not a precise anatomical boundary; it is linked to UBERON where a corresponding structure exists."@en .
+
+cso11:BodyZone rdf:type owl:Class ;
+    owl:deprecated true ;
+    rdfs:label "obsolete BodyZone"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000010 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# headScalp -> CXSO_0000011  [core]
+cxso:CXSO_0000011 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Head / Scalp"@en ;
+    skos:prefLabel "Head / Scalp"@en ;
+    skos:notation "Zone 1" ;
+    skos:definition "Tension headaches, pressure, cognitive overwhelm."@en ;
+    skos:closeMatch obo:UBERON_0000033, obo:UBERON_0000403 ;
+    cxso:CXSO_0000166 1 .
+
+cso11:headScalp rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete headScalp"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000011 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# forehead -> CXSO_0000012  [core]
+cxso:CXSO_0000012 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Forehead"@en ;
+    skos:prefLabel "Forehead"@en ;
+    skos:notation "Zone 2" ;
+    skos:definition "Tension, pressure, furrowing; cognitive strain and worry patterns."@en ;
+    skos:closeMatch obo:UBERON_0008200 ;
+    cxso:CXSO_0000166 2 .
+
+cso11:forehead rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete forehead"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000012 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# eyes -> CXSO_0000013  [core]
+cxso:CXSO_0000013 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Eyes"@en ;
+    skos:prefLabel "Eyes"@en ;
+    skos:notation "Zone 3" ;
+    skos:definition "Strain, pressure, burning, tears; hypervigilance, crying suppression."@en ;
+    skos:closeMatch obo:UBERON_0000970 ;
+    cxso:CXSO_0000166 3 .
+
+cso11:eyes rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete eyes"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000013 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# jaw -> CXSO_0000014  [core]
+cxso:CXSO_0000014 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Jaw / TMJ"@en ;
+    skos:prefLabel "Jaw / TMJ"@en ;
+    skos:notation "Zone 4" ;
+    skos:definition "Clenching, grinding, tightness; RAGE suppression. Clinically informative."@en ;
+    skos:altLabel "Jaw"@en ;
+    skos:closeMatch obo:UBERON_0003700, obo:UBERON_0011595 ;
+    cxso:CXSO_0000166 4 .
+
+cso11:jaw rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete jaw"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000014 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# mouthLips -> CXSO_0000015  [core]
+cxso:CXSO_0000015 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Mouth / Lips"@en ;
+    skos:prefLabel "Mouth / Lips"@en ;
+    skos:notation "Zone 5" ;
+    skos:definition "Tightness, numbness, trembling; speech suppression, grief expression."@en ;
+    skos:closeMatch obo:UBERON_0000165, obo:UBERON_0001833 ;
+    cxso:CXSO_0000166 5 .
+
+cso11:mouthLips rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete mouthLips"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000015 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# throat -> CXSO_0000016  [core]
+cxso:CXSO_0000016 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Throat"@en ;
+    skos:prefLabel "Throat"@en ;
+    skos:notation "Zone 6" ;
+    skos:definition "Constriction, lump; suppressed expression across multiple territories."@en ;
+    skos:closeMatch obo:UBERON_0000341 ;
+    cxso:CXSO_0000166 6 .
+
+cso11:throat rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete throat"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000016 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# neckFront -> CXSO_0000017  [core]
+cxso:CXSO_0000017 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Neck (Front)"@en ;
+    skos:prefLabel "Neck (Front)"@en ;
+    skos:notation "Zone 7" ;
+    skos:definition "Tightness, vulnerability; exposure anxiety."@en ;
+    skos:broadMatch obo:UBERON_0000974 ;
+    cxso:CXSO_0000166 7 .
+
+cso11:neckFront rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete neckFront"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000017 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# neckBack -> CXSO_0000018  [core]
+cxso:CXSO_0000018 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Neck (Back)"@en ;
+    skos:prefLabel "Neck (Back)"@en ;
+    skos:notation "Zone 8" ;
+    skos:definition "Tension, stiffness, bracing; protective posture."@en ;
+    skos:closeMatch obo:UBERON_0012477 ;
+    cxso:CXSO_0000166 8 .
+
+cso11:neckBack rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete neckBack"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000018 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# shoulders -> CXSO_0000019  [core]
+cxso:CXSO_0000019 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Shoulders"@en ;
+    skos:prefLabel "Shoulders"@en ;
+    skos:notation "Zone 9" ;
+    skos:definition "Carrying, tension, elevation; extremely common across territories."@en ;
+    skos:closeMatch obo:UBERON_0001467 ;
+    cxso:CXSO_0000166 9 .
+
+cso11:shoulders rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete shoulders"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000019 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# upperChest -> CXSO_0000020  [core]
+cxso:CXSO_0000020 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Upper Chest"@en ;
+    skos:prefLabel "Upper Chest"@en ;
+    skos:notation "Zone 10" ;
+    skos:definition "Tightness, pressure, racing; FEAR system activation, cardiac awareness."@en ;
+    skos:closeMatch obo:UBERON_0001443 ;
+    cxso:CXSO_0000166 10 .
+
+cso11:upperChest rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete upperChest"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000020 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# solarPlexus -> CXSO_0000021  [core]
+cxso:CXSO_0000021 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Solar Plexus"@en ;
+    skos:prefLabel "Solar Plexus"@en ;
+    skos:notation "Zone 11" ;
+    skos:definition "Churning, butterflies, knot; core anxiety, diaphragmatic tension."@en ;
+    skos:closeMatch obo:UBERON_0035276 ;
+    cxso:CXSO_0000166 11 .
+
+cso11:solarPlexus rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete solarPlexus"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000021 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# stomach -> CXSO_0000022  [core]
+cxso:CXSO_0000022 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Stomach / Abdomen"@en ;
+    skos:prefLabel "Stomach / Abdomen"@en ;
+    skos:notation "Zone 12" ;
+    skos:definition "Nausea, churning, sinking; gut-brain axis, visceral distress."@en ;
+    skos:altLabel "Stomach"@en ;
+    skos:closeMatch obo:UBERON_0000916, obo:UBERON_0000945 ;
+    cxso:CXSO_0000166 12 .
+
+cso11:stomach rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete stomach"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000022 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# lowerAbdomen -> CXSO_0000023  [core]
+cxso:CXSO_0000023 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Lower Abdomen / Pelvis"@en ;
+    skos:prefLabel "Lower Abdomen / Pelvis"@en ;
+    skos:notation "Zone 13" ;
+    skos:definition "Tension, numbness, dissociation; trauma-sensitive zone."@en ;
+    skos:altLabel "Lower Abdomen"@en ;
+    skos:closeMatch obo:UBERON_0002355, obo:UBERON_0013203 ;
+    cxso:CXSO_0000166 13 .
+
+cso11:lowerAbdomen rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete lowerAbdomen"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000023 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# upperBack -> CXSO_0000024  [core]
+cxso:CXSO_0000024 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Upper Back"@en ;
+    skos:prefLabel "Upper Back"@en ;
+    skos:notation "Zone 14" ;
+    skos:definition "Tension, aching, bracing; protective posture, chronic guarding."@en ;
+    skos:closeMatch obo:UBERON_0008231 ;
+    cxso:CXSO_0000166 14 .
+
+cso11:upperBack rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete upperBack"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000024 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# lowerBack -> CXSO_0000025  [core]
+cxso:CXSO_0000025 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Lower Back"@en ;
+    skos:prefLabel "Lower Back"@en ;
+    skos:notation "Zone 15" ;
+    skos:definition "Aching, tension, weakness; structural support anxiety."@en ;
+    skos:closeMatch obo:UBERON_0005462 ;
+    cxso:CXSO_0000166 15 .
+
+cso11:lowerBack rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete lowerBack"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000025 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# upperArms -> CXSO_0000026  [core]
+cxso:CXSO_0000026 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Arms (Upper)"@en ;
+    skos:prefLabel "Arms (Upper)"@en ;
+    skos:notation "Zone 16" ;
+    skos:definition "Heaviness, weakness, restlessness; reaching, holding and pushing gestures."@en ;
+    skos:closeMatch obo:UBERON_0003822 ;
+    cxso:CXSO_0000166 16 .
+
+cso11:upperArms rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete upperArms"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000026 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# forearms -> CXSO_0000027  [core]
+cxso:CXSO_0000027 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Forearms"@en ;
+    skos:prefLabel "Forearms"@en ;
+    skos:notation "Zone 17" ;
+    skos:definition "Tension, tingling, weakness; action readiness or suppression."@en ;
+    skos:closeMatch obo:UBERON_0002386 ;
+    cxso:CXSO_0000166 17 .
+
+cso11:forearms rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete forearms"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000027 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# hands -> CXSO_0000028  [core]
+cxso:CXSO_0000028 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Hands"@en ;
+    skos:prefLabel "Hands"@en ;
+    skos:notation "Zone 18" ;
+    skos:definition "Clenching, tingling, numbness, sweating; highly expressive zone."@en ;
+    skos:closeMatch obo:UBERON_0002398 ;
+    cxso:CXSO_0000166 18 .
+
+cso11:hands rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete hands"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000028 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# hips -> CXSO_0000029  [core]
+cxso:CXSO_0000029 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Hips"@en ;
+    skos:prefLabel "Hips"@en ;
+    skos:notation "Zone 19" ;
+    skos:definition "Tightness, restriction; mobility, procedural tension patterns."@en ;
+    skos:closeMatch obo:UBERON_0001464 ;
+    cxso:CXSO_0000166 19 .
+
+cso11:hips rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete hips"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000029 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# upperLegs -> CXSO_0000030  [core]
+cxso:CXSO_0000030 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Upper Legs / Thighs"@en ;
+    skos:prefLabel "Upper Legs / Thighs"@en ;
+    skos:notation "Zone 20" ;
+    skos:definition "Heaviness, tension, restlessness; flight readiness or collapse."@en ;
+    skos:altLabel "Upper Legs"@en ;
+    skos:closeMatch obo:UBERON_0000376 ;
+    cxso:CXSO_0000166 20 .
+
+cso11:upperLegs rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete upperLegs"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000030 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# knees -> CXSO_0000031  [core]
+cxso:CXSO_0000031 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Knees"@en ;
+    skos:prefLabel "Knees"@en ;
+    skos:notation "Zone 21" ;
+    skos:definition "Weakness, instability; structural anxiety. Clinically informative."@en ;
+    skos:closeMatch obo:UBERON_0001465 ;
+    cxso:CXSO_0000166 21 .
+
+cso11:knees rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete knees"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000031 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# lowerLegs -> CXSO_0000032  [core]
+cxso:CXSO_0000032 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Lower Legs / Calves"@en ;
+    skos:prefLabel "Lower Legs / Calves"@en ;
+    skos:notation "Zone 22" ;
+    skos:definition "Heaviness, restlessness, cramping; grounding connection."@en ;
+    skos:altLabel "Lower Legs"@en ;
+    skos:closeMatch obo:UBERON_0003823, obo:UBERON_8480048 ;
+    cxso:CXSO_0000166 22 .
+
+cso11:lowerLegs rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete lowerLegs"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000032 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# feet -> CXSO_0000033  [core]
+cxso:CXSO_0000033 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Feet"@en ;
+    skos:prefLabel "Feet"@en ;
+    skos:notation "Zone 23" ;
+    skos:definition "Numbness, tingling, groundedness; grounding anchor zone."@en ;
+    skos:closeMatch obo:UBERON_0002387 ;
+    cxso:CXSO_0000166 23 .
+
+cso11:feet rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete feet"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000033 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# pelvicFloor -> CXSO_0000034  [core]
+cxso:CXSO_0000034 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Pelvic Floor"@en ;
+    skos:prefLabel "Pelvic Floor"@en ;
+    skos:notation "Zone 24" ;
+    skos:definition "Deep guarding, tension, numbness; trauma-sensitive, sexual and attachment associations."@en ;
+    skos:closeMatch obo:UBERON_0008612 ;
+    cxso:CXSO_0000166 24 .
+
+cso11:pelvicFloor rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete pelvicFloor"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000034 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# vestibular -> CXSO_0000035  [core]
+cxso:CXSO_0000035 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Vestibular / Balance"@en ;
+    skos:prefLabel "Vestibular / Balance"@en ;
+    skos:notation "Zone 25" ;
+    skos:definition "Dizziness, unsteadiness, groundlessness; dissociative and transition states."@en ;
+    skos:relatedMatch obo:UBERON_0004681 ;
+    cxso:CXSO_0000166 25 .
+
+cso11:vestibular rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete vestibular"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000035 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# heart -> CXSO_0000036  [core]
+cxso:CXSO_0000036 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Heart"@en ;
+    skos:prefLabel "Heart"@en ;
+    skos:notation "Zone 26" ;
+    skos:definition "Racing, pounding, skipping; cardiac interoception distinct from chest wall tightness."@en ;
+    skos:closeMatch obo:UBERON_0000948 ;
+    cxso:CXSO_0000166 26 .
+
+cso11:heart rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete heart"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000036 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# diaphragm -> CXSO_0000037  [core]
+cxso:CXSO_0000037 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Diaphragm"@en ;
+    skos:prefLabel "Diaphragm"@en ;
+    skos:notation "Zone 27" ;
+    skos:definition "Constriction, catching, restriction; breath holding, autonomic regulation anchor."@en ;
+    skos:closeMatch obo:UBERON_0001103 ;
+    cxso:CXSO_0000166 27 .
+
+cso11:diaphragm rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete diaphragm"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000037 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# wholeBody -> CXSO_0000038  [core]
+cxso:CXSO_0000038 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Whole Body / Systemic"@en ;
+    skos:prefLabel "Whole Body / Systemic"@en ;
+    skos:notation "Zone 28" ;
+    skos:definition "Non-localizable sensations: diffuse fatigue, buzzing, heaviness. Genuinely systemic sensations that forcing localization would misrepresent."@en ;
+    skos:altLabel "Whole Body"@en ;
+    cxso:CXSO_0000166 28 .
+
+cso11:wholeBody rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete wholeBody"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000038 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# unspecified -> CXSO_0000039  [core]
+cxso:CXSO_0000039 rdf:type owl:NamedIndividual, cxso:CXSO_0000010 ;
+    rdfs:label "Unspecified"@en ;
+    skos:prefLabel "Unspecified"@en ;
+    skos:notation "Zone 29" ;
+    skos:definition "Present but not yet localized. Therapeutically important for people who are developing interoceptive capacity. The ratio of unspecified-to-localized reports over time measures developing body awareness."@en ;
+    skos:altLabel "Can't Pinpoint"@en ;
+    cxso:CXSO_0000166 29 .
+
+cso11:unspecified rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete unspecified"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000039 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# SensationQuality -> CXSO_0000040  [core]
+cxso:CXSO_0000040 rdf:type owl:Class ;
+    rdfs:subClassOf cxso:CXSO_0000001 ;
+    rdfs:label "Sensation Quality"@en ;
+    skos:prefLabel "Sensation Quality"@en ;
+    skos:definition "A phenomenological sensation descriptor. Somatic qualities, not emotional labels. Defined phenomenologically (what it feels like) rather than mechanistically (what causes it)."@en .
+
+cso11:SensationQuality rdf:type owl:Class ;
+    owl:deprecated true ;
+    rdfs:label "obsolete SensationQuality"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000040 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# tightness -> CXSO_0000041  [core]
+cxso:CXSO_0000041 rdf:type owl:NamedIndividual, cxso:CXSO_0000040 ;
+    rdfs:label "Tightness"@en ;
+    skos:prefLabel "Tightness"@en ;
+    skos:definition "Constriction, gripping, clenching. FEAR activation, muscular bracing, suppressed expression. Most commonly reported quality across populations."@en ;
+    skos:altLabel "clenching"@en, "constriction"@en, "gripping"@en, "knot"@en, "stiffness"@en, "tense"@en, "tension"@en, "tight"@en .
+
+cso11:tightness rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete tightness"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000041 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# heat -> CXSO_0000042  [core]
+cxso:CXSO_0000042 rdf:type owl:NamedIndividual, cxso:CXSO_0000040 ;
+    rdfs:label "Heat / Warmth"@en ;
+    skos:prefLabel "Heat / Warmth"@en ;
+    skos:definition "Radiating temperature increase, flushing. RAGE activation, shame response (facial heat), inflammatory processes."@en ;
+    skos:altLabel "Heat"@en, "burning"@en, "facial heat"@en, "flushing"@en, "hot"@en, "warm"@en .
+
+cso11:heat rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete heat"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000042 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# cold -> CXSO_0000043  [core]
+cxso:CXSO_0000043 rdf:type owl:NamedIndividual, cxso:CXSO_0000040 ;
+    rdfs:label "Cold"@en ;
+    skos:prefLabel "Cold"@en ;
+    skos:definition "Temperature decrease, chilling. Dissociative states, withdrawal, circulatory changes in freeze responses."@en ;
+    skos:altLabel "chilled"@en, "chilly"@en, "icy"@en .
+
+cso11:cold rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete cold"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000043 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# pressure -> CXSO_0000044  [core]
+cxso:CXSO_0000044 rdf:type owl:NamedIndividual, cxso:CXSO_0000040 ;
+    rdfs:label "Pressure"@en ;
+    skos:prefLabel "Pressure"@en ;
+    skos:definition "Compression, weight, bearing down. Overwhelm, suppressed affect, tension accumulation."@en ;
+    skos:altLabel "bearing down"@en, "compression"@en, "fullness"@en, "lump"@en, "weight on"@en .
+
+cso11:pressure rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete pressure"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000044 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# tingling -> CXSO_0000045  [core]
+cxso:CXSO_0000045 rdf:type owl:NamedIndividual, cxso:CXSO_0000040 ;
+    rdfs:label "Tingling"@en ;
+    skos:prefLabel "Tingling"@en ;
+    skos:definition "Fine electrical sensation, pins and needles. Autonomic arousal, hyperventilation, peripheral nervous system activation."@en ;
+    skos:altLabel "pins and needles"@en, "prickling"@en .
+
+cso11:tingling rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete tingling"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000045 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# numbness -> CXSO_0000046  [core]
+cxso:CXSO_0000046 rdf:type owl:NamedIndividual, cxso:CXSO_0000040 ;
+    rdfs:label "Numbness"@en ;
+    skos:prefLabel "Numbness"@en ;
+    skos:definition "Absence of sensation, deadness, blankness. Dissociation, shutdown, protective disconnection from interoceptive signal."@en ;
+    skos:altLabel "blank"@en, "can't feel it"@en, "dead"@en, "numb"@en .
+
+cso11:numbness rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete numbness"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000046 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# pain -> CXSO_0000047  [core]
+cxso:CXSO_0000047 rdf:type owl:NamedIndividual, cxso:CXSO_0000040 ;
+    rdfs:label "Pain"@en ;
+    skos:prefLabel "Pain"@en ;
+    skos:definition "Sharp, specific, localized nociception. Chronic pain territories, acute somatic distress, body-as-alarm."@en ;
+    skos:altLabel "hurting"@en, "sharp"@en, "stabbing"@en .
+
+cso11:pain rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete pain"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000047 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# heaviness -> CXSO_0000048  [core]
+cxso:CXSO_0000048 rdf:type owl:NamedIndividual, cxso:CXSO_0000040 ;
+    rdfs:label "Heaviness"@en ;
+    skos:prefLabel "Heaviness"@en ;
+    skos:definition "Weight, density, gravitational pull. SEEKING suppression (Living in Shutdown), fatigue, depressive somatization."@en ;
+    skos:altLabel "heavy"@en, "leaden"@en, "weighed down"@en .
+
+cso11:heaviness rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete heaviness"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000048 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# lightness -> CXSO_0000049  [core]
+cxso:CXSO_0000049 rdf:type owl:NamedIndividual, cxso:CXSO_0000040 ;
+    rdfs:label "Lightness"@en ;
+    skos:prefLabel "Lightness"@en ;
+    skos:definition "Buoyancy, ease. Post-regulation shift, PLAY activation, reduced sympathetic tone."@en ;
+    skos:altLabel "buoyant"@en, "light"@en .
+
+cso11:lightness rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete lightness"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000049 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# pulsing -> CXSO_0000050  [core]
+cxso:CXSO_0000050 rdf:type owl:NamedIndividual, cxso:CXSO_0000040 ;
+    rdfs:label "Pulsing"@en ;
+    skos:prefLabel "Pulsing"@en ;
+    skos:definition "Rhythmic beat, throbbing. Cardiovascular awareness, autonomic oscillation, activation pattern."@en ;
+    skos:altLabel "beating"@en, "pounding"@en, "throbbing"@en .
+
+cso11:pulsing rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete pulsing"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000050 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# hollow -> CXSO_0000051  [core]
+cxso:CXSO_0000051 rdf:type owl:NamedIndividual, cxso:CXSO_0000040 ;
+    rdfs:label "Hollowness"@en ;
+    skos:prefLabel "Hollowness"@en ;
+    skos:definition "Emptiness, void, absence of substance. Grief (Living in Loss), existential states (Living in Existential Confrontation), identity emptiness (Living Behind a Mask)."@en ;
+    skos:altLabel "Hollow"@en, "empty"@en, "void"@en .
+
+cso11:hollow rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete hollow"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000051 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# buzzing -> CXSO_0000052  [core]
+cxso:CXSO_0000052 rdf:type owl:NamedIndividual, cxso:CXSO_0000040 ;
+    rdfs:label "Buzzing"@en ;
+    skos:prefLabel "Buzzing"@en ;
+    skos:definition "An electrical hum or fizz. Anxiety activation, restlessness, autonomic hyperarousal."@en ;
+    skos:altLabel "electric"@en, "fizzing"@en, "humming"@en, "wired"@en .
+
+cso11:buzzing rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete buzzing"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000052 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# nausea -> CXSO_0000053  [core]
+cxso:CXSO_0000053 rdf:type owl:NamedIndividual, cxso:CXSO_0000040 ;
+    rdfs:label "Nausea"@en ;
+    skos:prefLabel "Nausea"@en ;
+    skos:definition "Stomach turning, queasiness. Gut-brain axis distress, disgust, overwhelming affect, medication effects."@en ;
+    skos:altLabel "churning"@en, "queasy"@en, "sick to the stomach"@en .
+
+cso11:nausea rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete nausea"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000053 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# ache -> CXSO_0000054  [core]
+cxso:CXSO_0000054 rdf:type owl:NamedIndividual, cxso:CXSO_0000040 ;
+    rdfs:label "Aching"@en ;
+    skos:prefLabel "Aching"@en ;
+    skos:definition "Deep, diffuse, persistent discomfort. Chronic tension patterns, grief somatization, sustained stress."@en ;
+    skos:altLabel "Ache"@en, "dull ache"@en, "sore"@en .
+
+cso11:ache rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete ache"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000054 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# vibration -> CXSO_0000055  [core]
+cxso:CXSO_0000055 rdf:type owl:NamedIndividual, cxso:CXSO_0000040 ;
+    rdfs:label "Vibration"@en ;
+    skos:prefLabel "Vibration"@en ;
+    skos:definition "An inner oscillation felt through a zone, without visible movement. High activation, trauma-related activation, release of accumulated tension."@en ;
+    skos:altLabel "thrumming"@en, "vibrating"@en .
+
+cso11:vibration rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete vibration"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000055 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# stillness -> CXSO_0000056  [core]
+cxso:CXSO_0000056 rdf:type owl:NamedIndividual, cxso:CXSO_0000040 ;
+    rdfs:label "Stillness"@en ;
+    skos:prefLabel "Stillness"@en ;
+    skos:definition "Calm absence of movement. Living in Shutdown: stillness as arrival, not absence. Living in Existential Confrontation: presence without action. A rare positive signal."@en ;
+    skos:altLabel "quiet"@en, "settled"@en, "still"@en .
+
+cso11:stillness rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete stillness"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000056 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# expansion -> CXSO_0000057  [core]
+cxso:CXSO_0000057 rdf:type owl:NamedIndividual, cxso:CXSO_0000040 ;
+    rdfs:label "Expansion"@en ;
+    skos:prefLabel "Expansion"@en ;
+    skos:definition "Outward-radiating warmth, spaciousness. A positive somatic signal, often during successful regulation. Distinct from Heat / Warmth, which has urgency: expansion is spacious."@en ;
+    skos:altLabel "opening"@en, "spacious"@en, "widening"@en .
+
+cso11:expansion rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete expansion"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000057 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# contraction -> CXSO_0000058  [core]
+cxso:CXSO_0000058 rdf:type owl:NamedIndividual, cxso:CXSO_0000040 ;
+    rdfs:label "Contraction"@en ;
+    skos:prefLabel "Contraction"@en ;
+    skos:definition "Inward-pulling compression. Withdrawal, bracing, protective narrowing. Living in Disconnection, Living in Shame: pulling inward."@en ;
+    skos:altLabel "collapsing inward"@en, "pulling in"@en, "shrinking"@en .
+
+cso11:contraction rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete contraction"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000058 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# floating -> CXSO_0000059  [core]
+cxso:CXSO_0000059 rdf:type owl:NamedIndividual, cxso:CXSO_0000040 ;
+    rdfs:label "Floating"@en ;
+    skos:prefLabel "Floating"@en ;
+    skos:definition "Untethered, drifting sensation. Living in an Unfamiliar Life: groundlessness. Living Under Siege: dissociative lightness. Distinct from Lightness, which has buoyancy: floating has no anchor."@en ;
+    skos:altLabel "drifting"@en, "spacey"@en, "unanchored"@en .
+
+cso11:floating rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete floating"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000059 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# trembling -> CXSO_0000060  [core]
+cxso:CXSO_0000060 rdf:type owl:NamedIndividual, cxso:CXSO_0000040 ;
+    rdfs:label "Trembling"@en ;
+    skos:prefLabel "Trembling"@en ;
+    skos:definition "Fine involuntary shaking, felt or seen as movement. Somatic discharge: can be regulatory (release after activation) or a sign of distress (Living Under Siege freeze-thaw, Living in Overwhelm spillover)."@en ;
+    skos:altLabel "quivering"@en, "shaking"@en, "shivering"@en .
+
+cso11:trembling rdf:type owl:NamedIndividual ;
+    owl:deprecated true ;
+    rdfs:label "obsolete trembling"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000060 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# zone -> CXSO_0000158  [core]
+cxso:CXSO_0000158 rdf:type owl:ObjectProperty ;
+    rdfs:label "zone"@en ;
+    skos:prefLabel "zone"@en ;
+    skos:definition "The anatomical zone where a sensation was reported."@en ;
+    rdfs:domain cxso:CXSO_0000002 ;
+    rdfs:range cxso:CXSO_0000010 .
+
+cso11:zone rdf:type owl:ObjectProperty ;
+    owl:deprecated true ;
+    rdfs:label "obsolete zone"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000158 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# quality -> CXSO_0000159  [core]
+cxso:CXSO_0000159 rdf:type owl:ObjectProperty ;
+    rdfs:label "quality"@en ;
+    skos:prefLabel "quality"@en ;
+    skos:definition "The phenomenological sensation quality reported."@en ;
+    rdfs:domain cxso:CXSO_0000002 ;
+    rdfs:range cxso:CXSO_0000040 .
+
+cso11:quality rdf:type owl:ObjectProperty ;
+    owl:deprecated true ;
+    rdfs:label "obsolete quality"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000159 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# intensity -> CXSO_0000163  [core]
+cxso:CXSO_0000163 rdf:type owl:DatatypeProperty ;
+    rdfs:label "intensity"@en ;
+    skos:prefLabel "intensity"@en ;
+    skos:definition "An optional whole-number rating of how intense a sensation is, from 0 (not noticeable) to 10 (the most intense the person can imagine). Used on a data point, and optionally on a snapshot for the body state as a whole."@en ;
+    rdfs:range [ rdf:type rdfs:Datatype ; owl:onDatatype xsd:integer ; owl:withRestrictions ( [ xsd:minInclusive 0 ] [ xsd:maxInclusive 10 ] ) ] .
+
+cso11:intensity rdf:type owl:DatatypeProperty ;
+    owl:deprecated true ;
+    rdfs:label "obsolete intensity"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000163 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# zoneNumber -> CXSO_0000166  [core]
+cxso:CXSO_0000166 rdf:type owl:DatatypeProperty ;
+    rdfs:label "zone number"@en ;
+    skos:prefLabel "zone number"@en ;
+    skos:definition "The number of a zone, from 1 to 29, as used in clinical practice (\"Zone 10\")."@en ;
+    rdfs:domain cxso:CXSO_0000010 ;
+    rdfs:range xsd:integer .
+
+cso11:zoneNumber rdf:type owl:DatatypeProperty ;
+    owl:deprecated true ;
+    rdfs:label "obsolete zoneNumber"@en ;
+    dcterms:isReplacedBy cxso:CXSO_0000166 ;
+    skos:historyNote "Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0."@en .
+
+# EvidenceKind -> CXSO_0000172  [core]
+cxso:CXSO_0000172 rdf:type owl:Class ;
+    rdfs:subClassOf cxso:CXSO_0000001 ;
+    rdfs:label "Evidence Kind"@en ;
+    skos:prefLabel "Evidence Kind"@en ;
+    skos:definition "How a data point was obtained: said by the person, measured by an instrument, sensed by a device, done in an intervention, or noticed by the system."@en .
+
+# nothingStandsOut -> CXSO_0000173  [core]
+cxso:CXSO_0000173 rdf:type owl:DatatypeProperty ;
+    rdfs:label "nothing stands out"@en ;
+    skos:prefLabel "nothing stands out"@en ;
+    skos:definition "The person attended to their sensations and found nothing standing out. This is a report, distinct from the Numbness quality (a felt absence of sensation) and from a snapshot never taken."@en ;
+    rdfs:domain cxso:CXSO_0000003 ;
+    rdfs:range xsd:boolean .
+
+# timestamp -> CXSO_0000174  [core]
+cxso:CXSO_0000174 rdf:type owl:DatatypeProperty ;
+    rdfs:label "timestamp"@en ;
+    skos:prefLabel "timestamp"@en ;
+    skos:definition "The time of a somatic snapshot."@en ;
+    rdfs:domain cxso:CXSO_0000003 ;
+    rdfs:range xsd:dateTime .
+
+# evidenceKind -> CXSO_0000175  [core]
+cxso:CXSO_0000175 rdf:type owl:ObjectProperty ;
+    rdfs:label "has evidence kind"@en ;
+    skos:prefLabel "has evidence kind"@en ;
+    skos:definition "The kind of evidence by which a data point was obtained."@en ;
+    rdfs:domain cxso:CXSO_0000002 ;
+    rdfs:range cxso:CXSO_0000172 .
+
+# saidByPerson -> CXSO_0000176  [core]
+cxso:CXSO_0000176 rdf:type owl:NamedIndividual, cxso:CXSO_0000172 ;
+    rdfs:label "Said by the person"@en ;
+    skos:prefLabel "Said by the person"@en ;
+    skos:definition "Obtained as something said by the person."@en .
+
+# measuredByInstrument -> CXSO_0000177  [core]
+cxso:CXSO_0000177 rdf:type owl:NamedIndividual, cxso:CXSO_0000172 ;
+    rdfs:label "Measured by an instrument"@en ;
+    skos:prefLabel "Measured by an instrument"@en ;
+    skos:definition "Obtained as a measurement by an instrument."@en .
+
+# sensedByDevice -> CXSO_0000178  [core]
+cxso:CXSO_0000178 rdf:type owl:NamedIndividual, cxso:CXSO_0000172 ;
+    rdfs:label "Sensed by a device"@en ;
+    skos:prefLabel "Sensed by a device"@en ;
+    skos:definition "Obtained as something sensed by a device."@en .
+
+# doneInIntervention -> CXSO_0000179  [core]
+cxso:CXSO_0000179 rdf:type owl:NamedIndividual, cxso:CXSO_0000172 ;
+    rdfs:label "Done in an intervention"@en ;
+    skos:prefLabel "Done in an intervention"@en ;
+    skos:definition "Obtained as something done in an intervention."@en .
+
+# noticedBySystem -> CXSO_0000180  [core]
+cxso:CXSO_0000180 rdf:type owl:NamedIndividual, cxso:CXSO_0000172 ;
+    rdfs:label "Noticed by the system"@en ;
+    skos:prefLabel "Noticed by the system"@en ;
+    skos:definition "Obtained as something noticed by the system."@en .
+
+# hasDataPoint -> CXSO_0000216  [core]
+cxso:CXSO_0000216 rdf:type owl:ObjectProperty ;
+    rdfs:label "has data point"@en ;
+    skos:prefLabel "has data point"@en ;
+    skos:definition "A data point that is part of a snapshot. A snapshot with nothing stands out set to true has none."@en ;
+    rdfs:domain cxso:CXSO_0000003 ;
+    rdfs:range cxso:CXSO_0000002 .
+
+# hasSnapshot -> CXSO_0000217  [core]
+cxso:CXSO_0000217 rdf:type owl:ObjectProperty ;
+    rdfs:label "has snapshot"@en ;
+    skos:prefLabel "has snapshot"@en ;
+    skos:definition "A snapshot that is part of a trajectory. A trajectory's snapshots are ordered by their timestamps."@en ;
+    rdfs:domain cxso:CXSO_0000004 ;
+    rdfs:range cxso:CXSO_0000003 .

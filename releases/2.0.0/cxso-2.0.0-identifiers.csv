@@ -1,0 +1,218 @@
+code,prefLabel,notation,module,kind,status,old_v1.1_IRI,definition
+CXSO_0000001,Somatic Entity,,core,class,live,https://cathexis.health/ontology/cso/v1.1/SomaticEntity,The root class for every entity in the Cathexis Somatic Ontology.
+CXSO_0000002,Somatic Data Point,,core,class,live,https://cathexis.health/ontology/cso/v1.1/SomaticDataPoint,"A single sensation report: where in the body (zone), what kind (quality), and optionally how intense (a whole number from 0 to 10). The atomic unit of somatic data."
+CXSO_0000003,Somatic Snapshot,,core,class,live,https://cathexis.health/ontology/cso/v1.1/SomaticSnapshot,"A complete body state at a single moment. It holds zero or more data points; with none, nothing stands out may record that the person attended to their sensations and found nothing standing out."
+CXSO_0000004,Somatic Trajectory,,core,class,live,https://cathexis.health/ontology/cso/v1.1/SomaticTrajectory,"A body state over time: an ordered series of snapshots for one person. Aggregates computed from the series are an implementation concern, not part of the ontology."
+CXSO_0000005,Blanket Component,,clinical,class,live,https://cathexis.health/ontology/cso/v1.1/BlanketComponent,"One of the four components of Friston's Markov blanket formalism (internal, external, sensory and active states). The clinical extension uses them to organize the classes that describe a person."
+CXSO_0000006,Internal State,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/InternalState,The person's physiological and psychological condition as experienced through interoception. What the person builds observer capacity for.
+CXSO_0000007,External State,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/ExternalState,Environmental conditions influencing internal experience. What the person cannot directly control but must relate to.
+CXSO_0000008,Sensory State,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/SensoryState,The boundary where external becomes internal: the translation mechanism. Where prediction lives. The most clinically important component.
+CXSO_0000009,Active State,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/ActiveState,The person's repertoire of responses: actions to minimize prediction error. The intervention library as a toolkit of active states.
+CXSO_0000010,Body Zone,,core,class,live,https://cathexis.health/ontology/cso/v1.1/BodyZone,"An area of the body where a person reports a sensation. A zone is the area a person reports, not a precise anatomical boundary; it is linked to UBERON where a corresponding structure exists."
+CXSO_0000011,Head / Scalp,Zone 1,core,individual,live,https://cathexis.health/ontology/cso/v1.1/headScalp,"Tension headaches, pressure, cognitive overwhelm."
+CXSO_0000012,Forehead,Zone 2,core,individual,live,https://cathexis.health/ontology/cso/v1.1/forehead,"Tension, pressure, furrowing; cognitive strain and worry patterns."
+CXSO_0000013,Eyes,Zone 3,core,individual,live,https://cathexis.health/ontology/cso/v1.1/eyes,"Strain, pressure, burning, tears; hypervigilance, crying suppression."
+CXSO_0000014,Jaw / TMJ,Zone 4,core,individual,live,https://cathexis.health/ontology/cso/v1.1/jaw,"Clenching, grinding, tightness; RAGE suppression. Clinically informative."
+CXSO_0000015,Mouth / Lips,Zone 5,core,individual,live,https://cathexis.health/ontology/cso/v1.1/mouthLips,"Tightness, numbness, trembling; speech suppression, grief expression."
+CXSO_0000016,Throat,Zone 6,core,individual,live,https://cathexis.health/ontology/cso/v1.1/throat,"Constriction, lump; suppressed expression across multiple territories."
+CXSO_0000017,Neck (Front),Zone 7,core,individual,live,https://cathexis.health/ontology/cso/v1.1/neckFront,"Tightness, vulnerability; exposure anxiety."
+CXSO_0000018,Neck (Back),Zone 8,core,individual,live,https://cathexis.health/ontology/cso/v1.1/neckBack,"Tension, stiffness, bracing; protective posture."
+CXSO_0000019,Shoulders,Zone 9,core,individual,live,https://cathexis.health/ontology/cso/v1.1/shoulders,"Carrying, tension, elevation; extremely common across territories."
+CXSO_0000020,Upper Chest,Zone 10,core,individual,live,https://cathexis.health/ontology/cso/v1.1/upperChest,"Tightness, pressure, racing; FEAR system activation, cardiac awareness."
+CXSO_0000021,Solar Plexus,Zone 11,core,individual,live,https://cathexis.health/ontology/cso/v1.1/solarPlexus,"Churning, butterflies, knot; core anxiety, diaphragmatic tension."
+CXSO_0000022,Stomach / Abdomen,Zone 12,core,individual,live,https://cathexis.health/ontology/cso/v1.1/stomach,"Nausea, churning, sinking; gut-brain axis, visceral distress."
+CXSO_0000023,Lower Abdomen / Pelvis,Zone 13,core,individual,live,https://cathexis.health/ontology/cso/v1.1/lowerAbdomen,"Tension, numbness, dissociation; trauma-sensitive zone."
+CXSO_0000024,Upper Back,Zone 14,core,individual,live,https://cathexis.health/ontology/cso/v1.1/upperBack,"Tension, aching, bracing; protective posture, chronic guarding."
+CXSO_0000025,Lower Back,Zone 15,core,individual,live,https://cathexis.health/ontology/cso/v1.1/lowerBack,"Aching, tension, weakness; structural support anxiety."
+CXSO_0000026,Arms (Upper),Zone 16,core,individual,live,https://cathexis.health/ontology/cso/v1.1/upperArms,"Heaviness, weakness, restlessness; reaching, holding and pushing gestures."
+CXSO_0000027,Forearms,Zone 17,core,individual,live,https://cathexis.health/ontology/cso/v1.1/forearms,"Tension, tingling, weakness; action readiness or suppression."
+CXSO_0000028,Hands,Zone 18,core,individual,live,https://cathexis.health/ontology/cso/v1.1/hands,"Clenching, tingling, numbness, sweating; highly expressive zone."
+CXSO_0000029,Hips,Zone 19,core,individual,live,https://cathexis.health/ontology/cso/v1.1/hips,"Tightness, restriction; mobility, procedural tension patterns."
+CXSO_0000030,Upper Legs / Thighs,Zone 20,core,individual,live,https://cathexis.health/ontology/cso/v1.1/upperLegs,"Heaviness, tension, restlessness; flight readiness or collapse."
+CXSO_0000031,Knees,Zone 21,core,individual,live,https://cathexis.health/ontology/cso/v1.1/knees,"Weakness, instability; structural anxiety. Clinically informative."
+CXSO_0000032,Lower Legs / Calves,Zone 22,core,individual,live,https://cathexis.health/ontology/cso/v1.1/lowerLegs,"Heaviness, restlessness, cramping; grounding connection."
+CXSO_0000033,Feet,Zone 23,core,individual,live,https://cathexis.health/ontology/cso/v1.1/feet,"Numbness, tingling, groundedness; grounding anchor zone."
+CXSO_0000034,Pelvic Floor,Zone 24,core,individual,live,https://cathexis.health/ontology/cso/v1.1/pelvicFloor,"Deep guarding, tension, numbness; trauma-sensitive, sexual and attachment associations."
+CXSO_0000035,Vestibular / Balance,Zone 25,core,individual,live,https://cathexis.health/ontology/cso/v1.1/vestibular,"Dizziness, unsteadiness, groundlessness; dissociative and transition states."
+CXSO_0000036,Heart,Zone 26,core,individual,live,https://cathexis.health/ontology/cso/v1.1/heart,"Racing, pounding, skipping; cardiac interoception distinct from chest wall tightness."
+CXSO_0000037,Diaphragm,Zone 27,core,individual,live,https://cathexis.health/ontology/cso/v1.1/diaphragm,"Constriction, catching, restriction; breath holding, autonomic regulation anchor."
+CXSO_0000038,Whole Body / Systemic,Zone 28,core,individual,live,https://cathexis.health/ontology/cso/v1.1/wholeBody,"Non-localizable sensations: diffuse fatigue, buzzing, heaviness. Genuinely systemic sensations that forcing localization would misrepresent."
+CXSO_0000039,Unspecified,Zone 29,core,individual,live,https://cathexis.health/ontology/cso/v1.1/unspecified,Present but not yet localized. Therapeutically important for people who are developing interoceptive capacity. The ratio of unspecified-to-localized reports over time measures developing body awareness.
+CXSO_0000040,Sensation Quality,,core,class,live,https://cathexis.health/ontology/cso/v1.1/SensationQuality,"A phenomenological sensation descriptor. Somatic qualities, not emotional labels. Defined phenomenologically (what it feels like) rather than mechanistically (what causes it)."
+CXSO_0000041,Tightness,,core,individual,live,https://cathexis.health/ontology/cso/v1.1/tightness,"Constriction, gripping, clenching. FEAR activation, muscular bracing, suppressed expression. Most commonly reported quality across populations."
+CXSO_0000042,Heat / Warmth,,core,individual,live,https://cathexis.health/ontology/cso/v1.1/heat,"Radiating temperature increase, flushing. RAGE activation, shame response (facial heat), inflammatory processes."
+CXSO_0000043,Cold,,core,individual,live,https://cathexis.health/ontology/cso/v1.1/cold,"Temperature decrease, chilling. Dissociative states, withdrawal, circulatory changes in freeze responses."
+CXSO_0000044,Pressure,,core,individual,live,https://cathexis.health/ontology/cso/v1.1/pressure,"Compression, weight, bearing down. Overwhelm, suppressed affect, tension accumulation."
+CXSO_0000045,Tingling,,core,individual,live,https://cathexis.health/ontology/cso/v1.1/tingling,"Fine electrical sensation, pins and needles. Autonomic arousal, hyperventilation, peripheral nervous system activation."
+CXSO_0000046,Numbness,,core,individual,live,https://cathexis.health/ontology/cso/v1.1/numbness,"Absence of sensation, deadness, blankness. Dissociation, shutdown, protective disconnection from interoceptive signal."
+CXSO_0000047,Pain,,core,individual,live,https://cathexis.health/ontology/cso/v1.1/pain,"Sharp, specific, localized nociception. Chronic pain territories, acute somatic distress, body-as-alarm."
+CXSO_0000048,Heaviness,,core,individual,live,https://cathexis.health/ontology/cso/v1.1/heaviness,"Weight, density, gravitational pull. SEEKING suppression (Living in Shutdown), fatigue, depressive somatization."
+CXSO_0000049,Lightness,,core,individual,live,https://cathexis.health/ontology/cso/v1.1/lightness,"Buoyancy, ease. Post-regulation shift, PLAY activation, reduced sympathetic tone."
+CXSO_0000050,Pulsing,,core,individual,live,https://cathexis.health/ontology/cso/v1.1/pulsing,"Rhythmic beat, throbbing. Cardiovascular awareness, autonomic oscillation, activation pattern."
+CXSO_0000051,Hollowness,,core,individual,live,https://cathexis.health/ontology/cso/v1.1/hollow,"Emptiness, void, absence of substance. Grief (Living in Loss), existential states (Living in Existential Confrontation), identity emptiness (Living Behind a Mask)."
+CXSO_0000052,Buzzing,,core,individual,live,https://cathexis.health/ontology/cso/v1.1/buzzing,"An electrical hum or fizz. Anxiety activation, restlessness, autonomic hyperarousal."
+CXSO_0000053,Nausea,,core,individual,live,https://cathexis.health/ontology/cso/v1.1/nausea,"Stomach turning, queasiness. Gut-brain axis distress, disgust, overwhelming affect, medication effects."
+CXSO_0000054,Aching,,core,individual,live,https://cathexis.health/ontology/cso/v1.1/ache,"Deep, diffuse, persistent discomfort. Chronic tension patterns, grief somatization, sustained stress."
+CXSO_0000055,Vibration,,core,individual,live,https://cathexis.health/ontology/cso/v1.1/vibration,"An inner oscillation felt through a zone, without visible movement. High activation, trauma-related activation, release of accumulated tension."
+CXSO_0000056,Stillness,,core,individual,live,https://cathexis.health/ontology/cso/v1.1/stillness,"Calm absence of movement. Living in Shutdown: stillness as arrival, not absence. Living in Existential Confrontation: presence without action. A rare positive signal."
+CXSO_0000057,Expansion,,core,individual,live,https://cathexis.health/ontology/cso/v1.1/expansion,"Outward-radiating warmth, spaciousness. A positive somatic signal, often during successful regulation. Distinct from Heat / Warmth, which has urgency: expansion is spacious."
+CXSO_0000058,Contraction,,core,individual,live,https://cathexis.health/ontology/cso/v1.1/contraction,"Inward-pulling compression. Withdrawal, bracing, protective narrowing. Living in Disconnection, Living in Shame: pulling inward."
+CXSO_0000059,Floating,,core,individual,live,https://cathexis.health/ontology/cso/v1.1/floating,"Untethered, drifting sensation. Living in an Unfamiliar Life: groundlessness. Living Under Siege: dissociative lightness. Distinct from Lightness, which has buoyancy: floating has no anchor."
+CXSO_0000060,Trembling,,core,individual,live,https://cathexis.health/ontology/cso/v1.1/trembling,"Fine involuntary shaking, felt or seen as movement. Somatic discharge: can be regulatory (release after activation) or a sign of distress (Living Under Siege freeze-thaw, Living in Overwhelm spillover)."
+CXSO_0000061,Territory of Human Experience,,clinical,class,live,https://cathexis.health/ontology/cso/v1.1/Territory,"A distinct pattern of neurobiological organization. Not a diagnosis; describes how a person's nervous system is currently organized and what that organization feels like from the inside. In Pessoa's terms, a characteristic pattern of dynamic functional coalition formation."
+CXSO_0000062,Living in Threat,T1,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/threat,High-precision threat predictions; ambiguous stimuli interpreted as dangerous.
+CXSO_0000063,Living in Shutdown,T2,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/shutdown,Collapsed generative model; predictions of low return suppress approach behavior.
+CXSO_0000064,Living in Loss,T3,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/loss,The model of the world with the person in it persists after the person is gone; prediction errors on absence.
+CXSO_0000065,Living in Disconnection,T4,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/disconnection,Relational predictions suppressed; intimacy modeled as dangerous.
+CXSO_0000066,Living in Overwhelm,T5,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/overwhelm,Multiple high-precision predictions competing simultaneously; regulatory capacity exceeded.
+CXSO_0000067,Living Under Siege,T6,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/siege,Locked threat predictions with extreme precision; inability to update despite safety.
+CXSO_0000068,Living in Inner Conflict,T7,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/conflict,Contradictory predictions with high precision in opposing directions.
+CXSO_0000069,Living in the Body Under Strain,T8,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/body,Brain's pain predictions maintained despite changed peripheral input; pain as construct.
+CXSO_0000070,Living Under Pressure From Outside,T9,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/systemPressure,Accurate predictions of genuine systemic threat; the stress response is appropriate.
+CXSO_0000071,Living in an Unfamiliar Life,T10,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/transition,Generative model of self under active reconstruction; predictions temporarily unreliable.
+CXSO_0000072,Living in Shame,T11,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/shame,Self-model prediction of unworthiness; core identity prediction of defectiveness.
+CXSO_0000073,Living in Addiction and Compulsion,T12,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/addiction,SEEKING system hijacked by a substance or behavior; reward predictions distorted.
+CXSO_0000074,Living Behind a Mask,T13,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/mask,False-self predictions maintained; authentic predictions suppressed.
+CXSO_0000075,Living in a World Built for Someone Else,T14,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/alteredBodyMind,Sensory processing differences; predictions calibrated to atypical neurology.
+CXSO_0000076,Living in Existential Confrontation,T15,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/existential,"Confrontation with predictions that cannot be resolved: mortality, meaning, freedom."
+CXSO_0000077,Living With a Changing Brain,T16,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/changingBrain,Memory systems themselves degrading; predictions increasingly unreliable. Procedural memory is the most resilient system.
+CXSO_0000078,Blanket Configuration,,clinical,class,live,https://cathexis.health/ontology/cso/v1.1/BlanketConfiguration,A characteristic pattern of Markov blanket organization shared by related territories.
+CXSO_0000079,Porosity pattern,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/Porosity,A blanket organization in which sensory translations are overactive: the boundary is too thin.
+CXSO_0000080,Rigidity pattern,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/Rigidity,A blanket organization in which sensory signals are suppressed: the boundary is too thick.
+CXSO_0000081,Boundary pattern,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/Boundary,A blanket organization in which the boundary is distorted: it is misshapen.
+CXSO_0000082,Damage pattern,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/Damage,A blanket organization in which the boundary is ruptured: it is torn.
+CXSO_0000083,Existential / Neurological pattern,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/ExistentialNeurological,"A blanket organization in which predictions may be accurate, or cannot be tested."
+CXSO_0000084,Primary Affect System,,clinical,class,live,https://cathexis.health/ontology/cso/v1.1/AffectSystem,One of Panksepp's seven genetically encoded primary affect systems with distinct neural circuitry.
+CXSO_0000085,SEEKING,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/SEEKING,"Dopaminergic motivation, exploration, curiosity. Suppression is a hallmark of Living in Shutdown."
+CXSO_0000086,FEAR,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/FEAR,Threat detection and defensive behavior. The primary driver of Living in Threat. Locked activation of this system is central to Living Under Siege.
+CXSO_0000087,RAGE,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/RAGE,"Frustration, assertive response. Suppressed RAGE appears as jaw tension."
+CXSO_0000088,PANIC/GRIEF,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/PANIC_GRIEF,"Separation distress, attachment. Primary system in Living in Loss. Suppressed in Living in Disconnection."
+CXSO_0000089,CARE,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/CARE,"Nurturing, bonding. Suppression indicates relational territory involvement."
+CXSO_0000090,PLAY,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/PLAY,"Social learning, joy, boundary-testing. Suppression is a sensitive clinical marker across all territories."
+CXSO_0000091,LUST,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/LUST,"Sexual motivation. Relevant to Living in Disconnection, Living Under Siege, and relational territories."
+CXSO_0000092,Brain Region,,clinical,class,live,https://cathexis.health/ontology/cso/v1.1/BrainRegion,"An anatomical structure of the brain named by the neural layer of the HES. Each region is linked to its term in UBERON, the standard anatomy ontology, with skos:exactMatch, or skos:closeMatch where the match is not exact. The CSO does not define brain anatomy. UBERON does."
+CXSO_0000093,Ventromedial Prefrontal / Orbitofrontal Cortex,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/prefrontalCortex,"A brain region: the ventromedial prefrontal and orbitofrontal cortex, named by the neural layer of the HES."
+CXSO_0000094,Anterior Cingulate Cortex,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/anteriorCingulate,"A brain region: the anterior cingulate cortex, named by the neural layer of the HES."
+CXSO_0000095,Posterior Cingulate Cortex / Precuneus,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/posteriorCingulate,"A brain region: the posterior cingulate cortex and precuneus, named by the neural layer of the HES."
+CXSO_0000096,Hippocampus,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/hippocampus,"A brain region: the hippocampus, named by the neural layer of the HES."
+CXSO_0000097,Thalamus,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/thalamus,"A brain region: the thalamus, named by the neural layer of the HES."
+CXSO_0000098,Amygdala,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/amygdala,"A brain region: the amygdala, named by the neural layer of the HES."
+CXSO_0000099,Anterior Insula,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/anteriorInsula,"A brain region: the anterior insula, named by the neural layer of the HES."
+CXSO_0000100,Posterior Insula,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/posteriorInsula,"A brain region: the posterior insula, named by the neural layer of the HES."
+CXSO_0000101,Somatosensory Cortex,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/somatosensoryCortex,"A brain region: the somatosensory cortex, named by the neural layer of the HES."
+CXSO_0000102,Hypothalamus,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/hypothalamus,"A brain region: the hypothalamus, named by the neural layer of the HES."
+CXSO_0000103,Brainstem,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/brainstem,"A brain region: the brainstem, including the periaqueductal gray, the nucleus of the solitary tract and the raphe nuclei, named by the neural layer of the HES."
+CXSO_0000104,Dorsolateral Prefrontal Cortex,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/dorsolateralPFC,"A brain region: the dorsolateral prefrontal cortex, named by the neural layer of the HES."
+CXSO_0000105,Temporal Pole,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/temporalPole,"A brain region: the temporal pole, named by the neural layer of the HES."
+CXSO_0000106,Lateral Temporal Cortex,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/lateralTemporalCortex,"A brain region: the lateral temporal cortex, named by the neural layer of the HES."
+CXSO_0000107,Parietal Cortex,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/parietalCortex,"A brain region: the parietal cortex, named by the neural layer of the HES."
+CXSO_0000108,Occipital Cortex,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/occipitalCortex,"A brain region: the occipital cortex, named by the neural layer of the HES."
+CXSO_0000109,Motor / Premotor Cortex,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/motorCortex,"A brain region: the primary motor and premotor cortex, named by the neural layer of the HES."
+CXSO_0000110,Basal Ganglia,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/basalGanglia,"A brain region: the basal ganglia, including the nucleus accumbens, caudate and putamen, named by the neural layer of the HES."
+CXSO_0000111,Cerebellum,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/cerebellum,"A brain region: the cerebellum, named by the neural layer of the HES."
+CXSO_0000112,Brain Network,,clinical,class,live,https://cathexis.health/ontology/cso/v1.1/BrainNetwork,"A functional system of interacting brain regions, as described in the research the HES draws on. Networks are concepts of the theory, not anatomical structures, so the CSO defines them itself."
+CXSO_0000113,Default Mode Network,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/defaultMode,"Self-referential processing, autobiographical memory, mind-wandering, future simulation. Active during rest. Overactive in rumination (Living in Shutdown)."
+CXSO_0000114,Salience Network,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/salience,"Detects what matters: threat, novelty, reward, social significance. The switchboard that routes attention between internal and external processing."
+CXSO_0000115,Central Executive Network,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/centralExecutive,"Cognitive control, working memory, goal-directed behavior, strategic planning."
+CXSO_0000116,Interoceptive Network,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/interoceptive,Body signal processing. Where the body's internal state becomes conscious felt experience.
+CXSO_0000117,Threat / Fear Circuit,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/threatFear,Rapid threat detection and defensive response. Panksepp's FEAR system plus cortical monitoring.
+CXSO_0000118,Reward / Motivation Network,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/seeking,"Panksepp's SEEKING system. Dopaminergic circuits that drive exploration, engagement, and approach behavior."
+CXSO_0000119,Social Brain Network,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/socialBrain,"Social cognition: reading faces, voices, intentions, and relational context. Models other minds and tracks social dynamics."
+CXSO_0000120,Memory Consolidation Network,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/memoryConsolidation,Consolidates experience into durable learning and contextualizes the present with the past. Active during reconsolidation and model updating.
+CXSO_0000121,Attachment / Loss Network,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/attachmentLoss,"Panksepp's PANIC/GRIEF circuitry. Processes separation distress, proximity-seeking, and the somatic weight of loss (Living in Loss, Living in Disconnection)."
+CXSO_0000122,PLAY Network,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/play,"Panksepp's PLAY system. Social joy, spontaneity, and boundary-testing. Suppression is a cross-territory marker of chronic strain; its return marks recovery."
+CXSO_0000123,Somatomotor Network,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/sensorimotor,"Motor execution, body schema, proprioception. The action network, engaged by movement-based regulation practices."
+CXSO_0000124,Bronfenbrenner Layer,,clinical,class,live,https://cathexis.health/ontology/cso/v1.1/BronfenbrennerLayer,An ecological systems layer from Bronfenbrenner's developmental ecology. Used to classify external state entities by their proximity and influence type.
+CXSO_0000125,Microsystem,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/micro,"Immediate relationships and settings: partner, family, close friends, workplace team, home."
+CXSO_0000126,Mesosystem,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/meso,"Interactions between microsystems: work-family conflict, school-home dynamics."
+CXSO_0000127,Exosystem,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/exo,"Indirect environments that affect the individual: partner's workplace stress, community resources, media."
+CXSO_0000128,Macrosystem,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/macro,"Broad cultural and societal patterns: economic conditions, political climate, cultural norms."
+CXSO_0000129,Chronosystem,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/chrono,"Transitions and shifts over time: life transitions, historical events, developmental changes."
+CXSO_0000130,Change Mechanism,,clinical,class,live,https://cathexis.health/ontology/cso/v1.1/ChangeMechanism,"A therapeutic change mechanism, each engaging a distinct memory system."
+CXSO_0000131,Memory Reconsolidation,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/memoryReconsolidationMechanism https://cathexis.health/ontology/cso/v1.1/reconsolidation,Opens and updates emotional memory during the reconsolidation window (approximately 4 to 6 hours).
+CXSO_0000132,New Habit Formation,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/newHabitFormation,Builds new procedural patterns through repetition and reward.
+CXSO_0000133,Model Updating,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/modelUpdating,Updates explicit beliefs and self-narratives through new information and reflection.
+CXSO_0000134,Learning Level,,clinical,class,live,https://cathexis.health/ontology/cso/v1.1/LearningLevel,"One of six capacities a person builds. They tend to develop in this order, and each earlier capacity supports the ones after it, but people move between levels and may work on several at once."
+CXSO_0000135,Somatic Awareness,L1,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/L1,The person notices body signals with increasing precision.
+CXSO_0000136,Regulation Capacity,L2,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/L2,The person shifts their own physiological state through practice.
+CXSO_0000137,Pattern Recognition,L3,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/L3,The person recognizes their predictions as predictions.
+CXSO_0000138,Prediction Testing,L4,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/L4,The person tests predictions through action in daily life.
+CXSO_0000139,Integration,L5,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/L5,New experience consolidates into an updated self-model.
+CXSO_0000140,Autonomous Practice,L6,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/L6,The person continues on their own and recognizes early warning signs.
+CXSO_0000141,Intelligence Layer,,clinical,class,live,https://cathexis.health/ontology/cso/v1.1/IntelligenceLayer,"A level of pattern detection over somatic data, from reflecting back what the person reported to predicting what comes next."
+CXSO_0000142,Reactive,I1,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/IL1,Pattern detection over internal states only.
+CXSO_0000143,Adaptive,I2,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/IL2,Pattern detection over internal and external states.
+CXSO_0000144,Pattern,I3,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/IL3,"Pattern detection over internal, external and sensory states."
+CXSO_0000145,Predictive,I4,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/IL4,"Pattern detection over the full blanket, over time."
+CXSO_0000146,Mechanism Type,,clinical,class,live,https://cathexis.health/ontology/cso/v1.1/MechanismType,A type of therapeutic intervention mechanism with defined neurobiological action.
+CXSO_0000147,Autonomic Regulation,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/autonomicRegulation,Shifts autonomic state via parasympathetic or sympathetic modulation.
+CXSO_0000148,Interoceptive Awareness,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/interoceptiveAwareness,Builds precision of body signal detection (anterior insular cortex).
+CXSO_0000149,Titrated Somatic Contact,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/somaticExperiencing,Titrated contact with somatic activation patterns; controlled nervous system processing.
+CXSO_0000150,Prediction Error Generation,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/predictionErrorGeneration,Creates controlled mismatch between prediction and experience.
+CXSO_0000151,obsolete memoryReconsolidationMechanism,,clinical,individual,retired,,
+CXSO_0000152,Interoceptive Exposure,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/interoceptiveExposure,Graduated contact with avoided body sensations.
+CXSO_0000153,Relational Somatic,,clinical,individual,live,https://cathexis.health/ontology/cso/v1.1/relationalSomatic,Body awareness in interpersonal context.
+CXSO_0000154,has blanket component,,clinical,property,live,https://cathexis.health/ontology/cso/v1.1/blanketComponent,The primary Markov blanket component this entity belongs to.
+CXSO_0000155,has blanket configuration,,clinical,property,live,https://cathexis.health/ontology/cso/v1.1/blanketConfiguration,The characteristic blanket organization pattern for a territory.
+CXSO_0000156,primary territories,,clinical,property,live,https://cathexis.health/ontology/cso/v1.1/primaryTerritories,Territories for which a brain region carries the strongest clinical signal.
+CXSO_0000157,Panksepp affects,,clinical,property,live,https://cathexis.health/ontology/cso/v1.1/pankseppAffects,Primary affect systems associated with a brain region.
+CXSO_0000158,zone,,core,property,live,https://cathexis.health/ontology/cso/v1.1/zone,The anatomical zone where a sensation was reported.
+CXSO_0000159,quality,,core,property,live,https://cathexis.health/ontology/cso/v1.1/quality,The phenomenological sensation quality reported.
+CXSO_0000160,has change mechanism,,clinical,property,live,https://cathexis.health/ontology/cso/v1.1/changeMechanism,The primary therapeutic change mechanism for a territory.
+CXSO_0000161,serves territory,,clinical,property,live,https://cathexis.health/ontology/cso/v1.1/servesTerritory,A mechanism type that serves a specific territory.
+CXSO_0000162,has region,,clinical,property,live,https://cathexis.health/ontology/cso/v1.1/hasRegion,A brain network that includes a specific brain region.
+CXSO_0000163,intensity,,core,property,live,https://cathexis.health/ontology/cso/v1.1/intensity,"An optional whole-number rating of how intense a sensation is, from 0 (not noticeable) to 10 (the most intense the person can imagine). Used on a data point, and optionally on a snapshot for the body state as a whole."
+CXSO_0000164,is rich club hub,,clinical,property,live,https://cathexis.health/ontology/cso/v1.1/isRichClubHub,Whether this brain region is a Pessoa rich club hub with dense cross-network connectivity.
+CXSO_0000165,anatomical name,,clinical,property,live,https://cathexis.health/ontology/cso/v1.1/anatomicalName,The neuroanatomical name of a brain region.
+CXSO_0000166,zone number,,core,property,live,https://cathexis.health/ontology/cso/v1.1/zoneNumber,"The number of a zone, from 1 to 29, as used in clinical practice (""Zone 10"")."
+CXSO_0000167,territory number,,clinical,property,live,https://cathexis.health/ontology/cso/v1.1/territoryNumber,"The number of a territory, from 1 to 16, as used in clinical practice (""T1"")."
+CXSO_0000168,affect configuration,,clinical,property,live,https://cathexis.health/ontology/cso/v1.1/affectConfiguration,The characteristic Panksepp affect system configuration for a territory.
+CXSO_0000169,neural substrate,,clinical,property,live,https://cathexis.health/ontology/cso/v1.1/neuralSubstrate,The brain structures in which an affect system's circuitry lies.
+CXSO_0000170,memory system,,clinical,property,live,https://cathexis.health/ontology/cso/v1.1/memorySystem,The memory system a change mechanism engages.
+CXSO_0000171,therapeutic direction,,clinical,property,live,https://cathexis.health/ontology/cso/v1.1/therapeuticDirection,The direction of therapeutic work for a blanket configuration.
+CXSO_0000172,Evidence Kind,,core,class,live,,"How a data point was obtained: said by the person, measured by an instrument, sensed by a device, done in an intervention, or noticed by the system."
+CXSO_0000173,nothing stands out,,core,property,live,,"The person attended to their sensations and found nothing standing out. This is a report, distinct from the Numbness quality (a felt absence of sensation) and from a snapshot never taken."
+CXSO_0000174,timestamp,,core,property,live,,The time of a somatic snapshot.
+CXSO_0000175,has evidence kind,,core,property,live,,The kind of evidence by which a data point was obtained.
+CXSO_0000176,Said by the person,,core,individual,live,,Obtained as something said by the person.
+CXSO_0000177,Measured by an instrument,,core,individual,live,,Obtained as a measurement by an instrument.
+CXSO_0000178,Sensed by a device,,core,individual,live,,Obtained as something sensed by a device.
+CXSO_0000179,Done in an intervention,,core,individual,live,,Obtained as something done in an intervention.
+CXSO_0000180,Noticed by the system,,core,individual,live,,Obtained as something noticed by the system.
+CXSO_0000181,Practice Type,,clinical,class,live,,A practice type names what the person does in an intervention.
+CXSO_0000182,HES Layer,,clinical,class,live,,"One of the ten layers of the Human Experience System (somatic, predictive, affective, neural, memory, relational, ecological, generational, technological, temporal)."
+CXSO_0000183,Risk Mechanism,,clinical,class,live,,"A mechanism of suicide risk, following HEF Chapter 25. The ontology names the mechanisms and defines no thresholds or scores, which remain clinical and implementation decisions."
+CXSO_0000184,Territory Status,,clinical,class,live,,Whether a territory is currently organizing the person's experience (active) or holds installed predictions that are not currently active (dormant).
+CXSO_0000185,Prediction,,clinical,class,live,,An expectation recorded before a period of experience.
+CXSO_0000186,Prediction Check,,clinical,class,live,,"A record of what happened, made after the period a prediction described."
+CXSO_0000187,Prediction Delta,,clinical,class,live,,The difference between a prediction and a later check.
+CXSO_0000188,has practice type,,clinical,property,live,,The practice type of an intervention: what the person does.
+CXSO_0000189,has HES layer,,clinical,property,live,,The Human Experience System layer in which a data point occurred.
+CXSO_0000190,has risk mechanism,,clinical,property,live,,Associates a record with one of the four risk mechanisms.
+CXSO_0000191,has territory status,,clinical,property,live,,Whether a territory is active or dormant for a person.
+CXSO_0000192,Breathwork,,clinical,individual,live,,Breath-based regulation; exhale-dominant patterns support parasympathetic activity.
+CXSO_0000193,Body Scan,,clinical,individual,live,,"Attention moved through the body, building interoceptive awareness and observer capacity."
+CXSO_0000194,Grounding,,clinical,individual,live,,Attention anchored in present external sensory input.
+CXSO_0000195,Bilateral Stimulation,,clinical,individual,live,,"Alternating left-right stimulation, such as tapping."
+CXSO_0000196,Muscular Release,,clinical,individual,live,,Cycles of tension and release that build awareness of the difference between them.
+CXSO_0000197,Containment,,clinical,individual,live,,Practices that build a felt sense of boundary and limit how much is held at once.
+CXSO_0000198,Psychoeducation,,clinical,individual,live,,Learning how predictions shape experience and how sensations are constructed; supports model updating.
+CXSO_0000199,Activation,,clinical,individual,live,,"Small movements and contact that raise arousal a little, for states of shutdown, heaviness or flatness (for example Living in Shutdown and Living in Shame), where regulation needs to move upward rather than toward calm."
+CXSO_0000200,The Somatic Layer,somatic,clinical,individual,live,,The somatic layer of the Human Experience System.
+CXSO_0000201,The Predictive Layer,predictive,clinical,individual,live,,The predictive layer of the Human Experience System.
+CXSO_0000202,The Affective Layer,affective,clinical,individual,live,,The affective layer of the Human Experience System.
+CXSO_0000203,The Neural Layer,neural,clinical,individual,live,,The neural layer of the Human Experience System.
+CXSO_0000204,The Memory Layer,memory,clinical,individual,live,,The memory layer of the Human Experience System.
+CXSO_0000205,The Relational Layer,relational,clinical,individual,live,,The relational layer of the Human Experience System.
+CXSO_0000206,The Ecological Layer,ecological,clinical,individual,live,,The ecological layer of the Human Experience System.
+CXSO_0000207,The Generational Layer,generational,clinical,individual,live,,The generational layer of the Human Experience System.
+CXSO_0000208,The Technological Layer,technological,clinical,individual,live,,The technological layer of the Human Experience System.
+CXSO_0000209,The Temporal Dimension,temporal,clinical,individual,live,,"The temporal dimension of the Human Experience System, the tenth of its layers."
+CXSO_0000210,Motivation,,clinical,individual,live,,"A reason for ending that is specific to the territory, for example ""there's no point"" in Living in Shutdown or ""I'm the problem"" in Living in Shame."
+CXSO_0000211,FEAR attenuation,,clinical,individual,live,,"The biological barrier lowering, so the person is less prevented rather than more motivated; for example metabolic conservation in Living in Shutdown, alcohol in Living in Addiction and Compulsion, dissociation in Living Under Siege."
+CXSO_0000212,Disinhibition and access to means,,clinical,individual,live,,"For example intoxication in Living in Addiction and Compulsion, impulsivity in Living in Overwhelm, or means available in the environment."
+CXSO_0000213,Isolation,,clinical,individual,live,,"The absence of a co-regulating other; for example withdrawal in Living in Disconnection, or the intact mask in Living Behind a Mask that makes a person appear fine."
+CXSO_0000214,Active,active,clinical,individual,live,,Currently organizing the person's experience.
+CXSO_0000215,Dormant,dormant,clinical,individual,live,,"Installed predictions not currently active, which a later trigger may activate."
+CXSO_0000216,has data point,,core,property,live,,A data point that is part of a snapshot. A snapshot with nothing stands out set to true has none.
+CXSO_0000217,has snapshot,,core,property,live,,A snapshot that is part of a trajectory. A trajectory's snapshots are ordered by their timestamps.

@@ -1,0 +1,38 @@
+name: New term
+description: Propose a sensation, zone or other term that existing CSO terms cannot code.
+title: "[New term] "
+labels: ["new term"]
+body:
+  - type: input
+    id: label
+    attributes:
+      label: Proposed label
+      description: The name of the term, as a clinician would write it.
+    validations:
+      required: true
+  - type: textarea
+    id: definition
+    attributes:
+      label: Proposed definition
+      description: What the term means, defined by what it feels like rather than what causes it.
+    validations:
+      required: true
+  - type: textarea
+    id: descriptions
+    attributes:
+      label: Descriptions it would code
+      description: Examples of how people describe this experience in their own words. Do not include anything that identifies a person.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why no existing term or synonym codes it
+      description: Name the closest existing terms (with their codes) and why they do not fit.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Agreement data, studies, or clinical rationale.

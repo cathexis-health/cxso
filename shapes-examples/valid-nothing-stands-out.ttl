@@ -1,0 +1,6 @@
+@prefix cxso: <https://w3id.org/cxso/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://example.org/> .
+
+# The person checked in and nothing stood out.
+ex:s2 a cxso:CXSO_0000003 ; cxso:CXSO_0000174 "2026-11-26T21:00:00-08:00"^^xsd:dateTime ; cxso:CXSO_0000173 true .

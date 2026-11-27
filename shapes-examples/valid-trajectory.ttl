@@ -1,0 +1,8 @@
+@prefix cxso: <https://w3id.org/cxso/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://example.org/> .
+
+ex:t1 a cxso:CXSO_0000004 ; cxso:CXSO_0000217 ex:s1, ex:s2 .
+ex:s1 a cxso:CXSO_0000003 ; cxso:CXSO_0000174 "2026-11-25T08:30:00-08:00"^^xsd:dateTime ; cxso:CXSO_0000216 ex:p1 .
+ex:p1 a cxso:CXSO_0000002 ; cxso:CXSO_0000158 cxso:CXSO_0000039 ; cxso:CXSO_0000159 cxso:CXSO_0000048 .
+ex:s2 a cxso:CXSO_0000003 ; cxso:CXSO_0000174 "2026-11-26T08:30:00-08:00"^^xsd:dateTime ; cxso:CXSO_0000173 true .

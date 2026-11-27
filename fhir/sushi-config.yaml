@@ -1,0 +1,15 @@
+id: cxso.fhir
+canonical: https://w3id.org/cxso/fhir
+name: CXSOFHIR
+title: "Cathexis Somatic Ontology (CSO): FHIR profiles"
+description: "How a CSO somatic report travels in FHIR R4: a CodeSystem and value sets generated from the ontology, profiles for a somatic data point and a somatic snapshot, and worked examples."
+status: active
+version: 2.0.0
+fhirVersion: 4.0.1
+copyrightYear: 2026+
+releaseLabel: release
+license: CC-BY-4.0
+publisher:
+  name: Cathexis Health LLC
+FSHOnly: true
+applyExtensionMetadataToRoot: false

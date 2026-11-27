@@ -1,0 +1,86 @@
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix cxso:  <https://w3id.org/cxso/> .
+@prefix cxsosh: <https://w3id.org/cxso/shapes/> .
+
+<https://w3id.org/cxso/shapes> a owl:Ontology ;
+    rdfs:label "CSO 2.0.0 data rules (SHACL)"@en ;
+    rdfs:comment "Rules any system can run to check that a somatic report it builds is valid CSO. Generated from cxso.ttl release 2.0.0. The core rules use only core terms; the HES layer rule applies when the clinical extension is used."@en ;
+    owl:versionInfo "2.0.0" .
+
+# A single sensation report: one zone, one quality, at most one intensity from 0 to 10.
+cxsosh:SomaticDataPoint a sh:NodeShape ;
+    sh:targetClass cxso:CXSO_0000002 ;
+    sh:property [
+        sh:path cxso:CXSO_0000158 ; sh:name "zone" ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ( cxso:CXSO_0000011 cxso:CXSO_0000012 cxso:CXSO_0000013 cxso:CXSO_0000014 cxso:CXSO_0000015 cxso:CXSO_0000016 cxso:CXSO_0000017 cxso:CXSO_0000018 cxso:CXSO_0000019 cxso:CXSO_0000020 cxso:CXSO_0000021 cxso:CXSO_0000022 cxso:CXSO_0000023 cxso:CXSO_0000024 cxso:CXSO_0000025 cxso:CXSO_0000026 cxso:CXSO_0000027 cxso:CXSO_0000028 cxso:CXSO_0000029 cxso:CXSO_0000030 cxso:CXSO_0000031 cxso:CXSO_0000032 cxso:CXSO_0000033 cxso:CXSO_0000034 cxso:CXSO_0000035 cxso:CXSO_0000036 cxso:CXSO_0000037 cxso:CXSO_0000038 cxso:CXSO_0000039 ) ;
+        sh:message "A data point has exactly one zone, and it is one of the 29 CSO zones." ] ;
+    sh:property [
+        sh:path cxso:CXSO_0000159 ; sh:name "quality" ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ( cxso:CXSO_0000041 cxso:CXSO_0000042 cxso:CXSO_0000043 cxso:CXSO_0000044 cxso:CXSO_0000045 cxso:CXSO_0000046 cxso:CXSO_0000047 cxso:CXSO_0000048 cxso:CXSO_0000049 cxso:CXSO_0000050 cxso:CXSO_0000051 cxso:CXSO_0000052 cxso:CXSO_0000053 cxso:CXSO_0000054 cxso:CXSO_0000055 cxso:CXSO_0000056 cxso:CXSO_0000057 cxso:CXSO_0000058 cxso:CXSO_0000059 cxso:CXSO_0000060 ) ;
+        sh:message "A data point has exactly one sensation quality, and it is one of the 20 CSO qualities." ] ;
+    sh:property [
+        sh:path cxso:CXSO_0000163 ; sh:name "intensity" ;
+        sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 0 ; sh:maxInclusive 10 ;
+        sh:message "Intensity is optional; when present it is one whole number from 0 to 10." ] ;
+    sh:property [
+        sh:path cxso:CXSO_0000175 ; sh:name "evidence kind" ;
+        sh:maxCount 1 ;
+        sh:in ( cxso:CXSO_0000176 cxso:CXSO_0000177 cxso:CXSO_0000178 cxso:CXSO_0000179 cxso:CXSO_0000180 ) ;
+        sh:message "Evidence kind is optional; when present it is one of the five CSO evidence kinds." ] ;
+    sh:property [
+        sh:path cxso:CXSO_0000189 ; sh:name "HES layer (clinical extension)" ;
+        sh:maxCount 1 ;
+        sh:in ( cxso:CXSO_0000200 cxso:CXSO_0000201 cxso:CXSO_0000202 cxso:CXSO_0000203 cxso:CXSO_0000204 cxso:CXSO_0000205 cxso:CXSO_0000206 cxso:CXSO_0000207 cxso:CXSO_0000208 cxso:CXSO_0000209 ) ;
+        sh:message "HES layer is optional; when present it is one of the ten HES layers." ] .
+
+# A body state at one moment.
+cxsosh:SomaticSnapshot a sh:NodeShape ;
+    sh:targetClass cxso:CXSO_0000003 ;
+    sh:property [
+        sh:path cxso:CXSO_0000174 ; sh:name "timestamp" ;
+        sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:dateTime ;
+        sh:message "A snapshot has exactly one timestamp (xsd:dateTime)." ] ;
+    sh:property [
+        sh:path cxso:CXSO_0000173 ; sh:name "nothing stands out" ;
+        sh:maxCount 1 ; sh:datatype xsd:boolean ;
+        sh:message "Nothing stands out is optional; when present it is true or false." ] ;
+    sh:property [
+        sh:path cxso:CXSO_0000163 ; sh:name "intensity (snapshot as a whole)" ;
+        sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 0 ; sh:maxInclusive 10 ;
+        sh:message "A snapshot's overall intensity is optional; when present it is one whole number from 0 to 10." ] ;
+    sh:property [
+        sh:path cxso:CXSO_0000216 ; sh:name "has data point" ;
+        sh:class cxso:CXSO_0000002 ;
+        sh:message "Each data point in a snapshot is a CSO data point." ] ;
+    sh:sparql [
+        sh:message "A snapshot that records nothing stands out holds no data points." ;
+        sh:prefixes cxso: ;
+        sh:select """
+            SELECT $this WHERE {
+                $this <https://w3id.org/cxso/CXSO_0000173> true .
+                $this <https://w3id.org/cxso/CXSO_0000216> ?p .
+            }""" ] .
+
+# A snapshot says something: at least one data point, or that nothing stood out.
+cxsosh:SomaticSnapshotContent a sh:NodeShape ;
+    sh:targetClass cxso:CXSO_0000003 ;
+    sh:or (
+        [ sh:path cxso:CXSO_0000216 ; sh:minCount 1 ]
+        [ sh:path cxso:CXSO_0000173 ; sh:hasValue true ]
+    ) ;
+    sh:message "A snapshot holds at least one data point, or records that nothing stands out." .
+
+# A body state over time.
+cxsosh:SomaticTrajectory a sh:NodeShape ;
+    sh:targetClass cxso:CXSO_0000004 ;
+    sh:property [
+        sh:path cxso:CXSO_0000217 ; sh:name "has snapshot" ;
+        sh:minCount 1 ; sh:class cxso:CXSO_0000003 ;
+        sh:message "A trajectory holds one or more CSO snapshots." ] .
+
+cxso: sh:declare [ sh:prefix "cxso" ; sh:namespace "https://w3id.org/cxso/"^^xsd:anyURI ] .

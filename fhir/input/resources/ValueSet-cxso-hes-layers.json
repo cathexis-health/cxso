@@ -1,0 +1,69 @@
+{
+  "resourceType": "ValueSet",
+  "id": "cxso-hes-layers",
+  "url": "https://w3id.org/cxso/fhir/ValueSet/hes-layers",
+  "name": "CXSOHesLayers",
+  "title": "HES layers",
+  "version": "2.0.0",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-11-26",
+  "publisher": "Cathexis Health LLC",
+  "contact": [
+    {
+      "name": "Justin DeGarbo"
+    }
+  ],
+  "copyright": "Cathexis Somatic Ontology (CSO), release 2.0.0. Justin DeGarbo / Cathexis Health LLC. CC BY 4.0: https://creativecommons.org/licenses/by/4.0/",
+  "description": "The ten layers of the Human Experience System (clinical extension).",
+  "compose": {
+    "include": [
+      {
+        "system": "https://w3id.org/cxso",
+        "version": "2.0.0",
+        "concept": [
+          {
+            "code": "CXSO:0000200",
+            "display": "The Somatic Layer"
+          },
+          {
+            "code": "CXSO:0000201",
+            "display": "The Predictive Layer"
+          },
+          {
+            "code": "CXSO:0000202",
+            "display": "The Affective Layer"
+          },
+          {
+            "code": "CXSO:0000203",
+            "display": "The Neural Layer"
+          },
+          {
+            "code": "CXSO:0000204",
+            "display": "The Memory Layer"
+          },
+          {
+            "code": "CXSO:0000205",
+            "display": "The Relational Layer"
+          },
+          {
+            "code": "CXSO:0000206",
+            "display": "The Ecological Layer"
+          },
+          {
+            "code": "CXSO:0000207",
+            "display": "The Generational Layer"
+          },
+          {
+            "code": "CXSO:0000208",
+            "display": "The Technological Layer"
+          },
+          {
+            "code": "CXSO:0000209",
+            "display": "The Temporal Dimension"
+          }
+        ]
+      }
+    ]
+  }
+}

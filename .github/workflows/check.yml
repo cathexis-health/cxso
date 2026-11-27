@@ -1,0 +1,36 @@
+name: Check the release
+on:
+  push:
+  pull_request:
+jobs:
+  ontology-and-rules:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install rdflib pyshacl "fhir.resources>=7" fhirpathpy
+      - name: Ontology files agree, codes are sound
+        run: python scripts/check_ontology.py .
+      - name: Data rules behave on the examples
+        run: python scripts/check_shapes.py .
+      - name: FHIR files fit the FHIR model and the profiles' rules
+        run: python scripts/check_fhir.py fhir
+  fhir-official:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Build the profiles with SUSHI
+        run: npx --yes fsh-sushi build fhir
+      - name: Validate with the HL7 FHIR validator
+        run: |
+          curl -sSL -o validator_cli.jar https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar
+          java -jar validator_cli.jar -version 4.0.1 -tx n/a -ig fhir/input/resources -ig fhir/fsh-generated/resources fhir/fsh-generated/resources/Observation-*.json

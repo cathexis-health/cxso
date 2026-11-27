@@ -1,0 +1,37 @@
+{
+  "resourceType": "ValueSet",
+  "id": "cxso-territory-status",
+  "url": "https://w3id.org/cxso/fhir/ValueSet/territory-status",
+  "name": "CXSOTerritoryStatus",
+  "title": "Territory status",
+  "version": "2.0.0",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-11-26",
+  "publisher": "Cathexis Health LLC",
+  "contact": [
+    {
+      "name": "Justin DeGarbo"
+    }
+  ],
+  "copyright": "Cathexis Somatic Ontology (CSO), release 2.0.0. Justin DeGarbo / Cathexis Health LLC. CC BY 4.0: https://creativecommons.org/licenses/by/4.0/",
+  "description": "Whether a territory is active or dormant for a person (clinical extension).",
+  "compose": {
+    "include": [
+      {
+        "system": "https://w3id.org/cxso",
+        "version": "2.0.0",
+        "concept": [
+          {
+            "code": "CXSO:0000214",
+            "display": "Active"
+          },
+          {
+            "code": "CXSO:0000215",
+            "display": "Dormant"
+          }
+        ]
+      }
+    ]
+  }
+}

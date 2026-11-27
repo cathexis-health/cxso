@@ -1,0 +1,93 @@
+{
+  "resourceType": "ValueSet",
+  "id": "cxso-territories",
+  "url": "https://w3id.org/cxso/fhir/ValueSet/territories",
+  "name": "CXSOTerritories",
+  "title": "HEF territories",
+  "version": "2.0.0",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-11-26",
+  "publisher": "Cathexis Health LLC",
+  "contact": [
+    {
+      "name": "Justin DeGarbo"
+    }
+  ],
+  "copyright": "Cathexis Somatic Ontology (CSO), release 2.0.0. Justin DeGarbo / Cathexis Health LLC. CC BY 4.0: https://creativecommons.org/licenses/by/4.0/",
+  "description": "The 16 territories of the Human Experience Framework (clinical extension). A territory is not a diagnosis.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://w3id.org/cxso",
+        "version": "2.0.0",
+        "concept": [
+          {
+            "code": "CXSO:0000062",
+            "display": "Living in Threat"
+          },
+          {
+            "code": "CXSO:0000063",
+            "display": "Living in Shutdown"
+          },
+          {
+            "code": "CXSO:0000064",
+            "display": "Living in Loss"
+          },
+          {
+            "code": "CXSO:0000065",
+            "display": "Living in Disconnection"
+          },
+          {
+            "code": "CXSO:0000066",
+            "display": "Living in Overwhelm"
+          },
+          {
+            "code": "CXSO:0000067",
+            "display": "Living Under Siege"
+          },
+          {
+            "code": "CXSO:0000068",
+            "display": "Living in Inner Conflict"
+          },
+          {
+            "code": "CXSO:0000069",
+            "display": "Living in the Body Under Strain"
+          },
+          {
+            "code": "CXSO:0000070",
+            "display": "Living Under Pressure From Outside"
+          },
+          {
+            "code": "CXSO:0000071",
+            "display": "Living in an Unfamiliar Life"
+          },
+          {
+            "code": "CXSO:0000072",
+            "display": "Living in Shame"
+          },
+          {
+            "code": "CXSO:0000073",
+            "display": "Living in Addiction and Compulsion"
+          },
+          {
+            "code": "CXSO:0000074",
+            "display": "Living Behind a Mask"
+          },
+          {
+            "code": "CXSO:0000075",
+            "display": "Living in a World Built for Someone Else"
+          },
+          {
+            "code": "CXSO:0000076",
+            "display": "Living in Existential Confrontation"
+          },
+          {
+            "code": "CXSO:0000077",
+            "display": "Living With a Changing Brain"
+          }
+        ]
+      }
+    ]
+  }
+}

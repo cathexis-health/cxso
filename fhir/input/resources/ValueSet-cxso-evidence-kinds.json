@@ -1,0 +1,49 @@
+{
+  "resourceType": "ValueSet",
+  "id": "cxso-evidence-kinds",
+  "url": "https://w3id.org/cxso/fhir/ValueSet/evidence-kinds",
+  "name": "CXSOEvidenceKinds",
+  "title": "CSO evidence kinds",
+  "version": "2.0.0",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-11-26",
+  "publisher": "Cathexis Health LLC",
+  "contact": [
+    {
+      "name": "Justin DeGarbo"
+    }
+  ],
+  "copyright": "Cathexis Somatic Ontology (CSO), release 2.0.0. Justin DeGarbo / Cathexis Health LLC. CC BY 4.0: https://creativecommons.org/licenses/by/4.0/",
+  "description": "How a data point was obtained.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://w3id.org/cxso",
+        "version": "2.0.0",
+        "concept": [
+          {
+            "code": "CXSO:0000176",
+            "display": "Said by the person"
+          },
+          {
+            "code": "CXSO:0000177",
+            "display": "Measured by an instrument"
+          },
+          {
+            "code": "CXSO:0000178",
+            "display": "Sensed by a device"
+          },
+          {
+            "code": "CXSO:0000179",
+            "display": "Done in an intervention"
+          },
+          {
+            "code": "CXSO:0000180",
+            "display": "Noticed by the system"
+          }
+        ]
+      }
+    ]
+  }
+}

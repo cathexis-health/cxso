@@ -1,0 +1,109 @@
+{
+  "resourceType": "ValueSet",
+  "id": "cxso-qualities",
+  "url": "https://w3id.org/cxso/fhir/ValueSet/qualities",
+  "name": "CXSOQualities",
+  "title": "CSO sensation qualities",
+  "version": "2.0.0",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-11-26",
+  "publisher": "Cathexis Health LLC",
+  "contact": [
+    {
+      "name": "Justin DeGarbo"
+    }
+  ],
+  "copyright": "Cathexis Somatic Ontology (CSO), release 2.0.0. Justin DeGarbo / Cathexis Health LLC. CC BY 4.0: https://creativecommons.org/licenses/by/4.0/",
+  "description": "The 20 CSO sensation qualities: what a sensation is like.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://w3id.org/cxso",
+        "version": "2.0.0",
+        "concept": [
+          {
+            "code": "CXSO:0000041",
+            "display": "Tightness"
+          },
+          {
+            "code": "CXSO:0000042",
+            "display": "Heat / Warmth"
+          },
+          {
+            "code": "CXSO:0000043",
+            "display": "Cold"
+          },
+          {
+            "code": "CXSO:0000044",
+            "display": "Pressure"
+          },
+          {
+            "code": "CXSO:0000045",
+            "display": "Tingling"
+          },
+          {
+            "code": "CXSO:0000046",
+            "display": "Numbness"
+          },
+          {
+            "code": "CXSO:0000047",
+            "display": "Pain"
+          },
+          {
+            "code": "CXSO:0000048",
+            "display": "Heaviness"
+          },
+          {
+            "code": "CXSO:0000049",
+            "display": "Lightness"
+          },
+          {
+            "code": "CXSO:0000050",
+            "display": "Pulsing"
+          },
+          {
+            "code": "CXSO:0000051",
+            "display": "Hollowness"
+          },
+          {
+            "code": "CXSO:0000052",
+            "display": "Buzzing"
+          },
+          {
+            "code": "CXSO:0000053",
+            "display": "Nausea"
+          },
+          {
+            "code": "CXSO:0000054",
+            "display": "Aching"
+          },
+          {
+            "code": "CXSO:0000055",
+            "display": "Vibration"
+          },
+          {
+            "code": "CXSO:0000056",
+            "display": "Stillness"
+          },
+          {
+            "code": "CXSO:0000057",
+            "display": "Expansion"
+          },
+          {
+            "code": "CXSO:0000058",
+            "display": "Contraction"
+          },
+          {
+            "code": "CXSO:0000059",
+            "display": "Floating"
+          },
+          {
+            "code": "CXSO:0000060",
+            "display": "Trembling"
+          }
+        ]
+      }
+    ]
+  }
+}

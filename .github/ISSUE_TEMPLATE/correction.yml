@@ -1,0 +1,23 @@
+name: Correction
+description: Report an error in a label, definition, mapping or file.
+title: "[Correction] "
+labels: ["correction"]
+body:
+  - type: input
+    id: code
+    attributes:
+      label: Code or file
+      description: For example, CXSO:0000020, or cxso-context.jsonld.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: What the source says
+      description: A link or citation, where there is one.

@@ -1,0 +1,7 @@
+@prefix cxso: <https://w3id.org/cxso/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://example.org/> .
+
+# v1.1 used 0.0 to 1.0; release 2.0.0 uses whole numbers from 0 to 10.
+ex:s1 a cxso:CXSO_0000003 ; cxso:CXSO_0000174 "2026-11-26T08:30:00-08:00"^^xsd:dateTime ; cxso:CXSO_0000216 ex:p1 .
+ex:p1 a cxso:CXSO_0000002 ; cxso:CXSO_0000158 cxso:CXSO_0000020 ; cxso:CXSO_0000159 cxso:CXSO_0000041 ; cxso:CXSO_0000163 0.7 .

@@ -1,0 +1,145 @@
+{
+  "resourceType": "ValueSet",
+  "id": "cxso-zones",
+  "url": "https://w3id.org/cxso/fhir/ValueSet/zones",
+  "name": "CXSOZones",
+  "title": "CSO body zones",
+  "version": "2.0.0",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-11-26",
+  "publisher": "Cathexis Health LLC",
+  "contact": [
+    {
+      "name": "Justin DeGarbo"
+    }
+  ],
+  "copyright": "Cathexis Somatic Ontology (CSO), release 2.0.0. Justin DeGarbo / Cathexis Health LLC. CC BY 4.0: https://creativecommons.org/licenses/by/4.0/",
+  "description": "The 29 CSO zones: where a person reports a sensation.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://w3id.org/cxso",
+        "version": "2.0.0",
+        "concept": [
+          {
+            "code": "CXSO:0000011",
+            "display": "Head / Scalp"
+          },
+          {
+            "code": "CXSO:0000012",
+            "display": "Forehead"
+          },
+          {
+            "code": "CXSO:0000013",
+            "display": "Eyes"
+          },
+          {
+            "code": "CXSO:0000014",
+            "display": "Jaw / TMJ"
+          },
+          {
+            "code": "CXSO:0000015",
+            "display": "Mouth / Lips"
+          },
+          {
+            "code": "CXSO:0000016",
+            "display": "Throat"
+          },
+          {
+            "code": "CXSO:0000017",
+            "display": "Neck (Front)"
+          },
+          {
+            "code": "CXSO:0000018",
+            "display": "Neck (Back)"
+          },
+          {
+            "code": "CXSO:0000019",
+            "display": "Shoulders"
+          },
+          {
+            "code": "CXSO:0000020",
+            "display": "Upper Chest"
+          },
+          {
+            "code": "CXSO:0000021",
+            "display": "Solar Plexus"
+          },
+          {
+            "code": "CXSO:0000022",
+            "display": "Stomach / Abdomen"
+          },
+          {
+            "code": "CXSO:0000023",
+            "display": "Lower Abdomen / Pelvis"
+          },
+          {
+            "code": "CXSO:0000024",
+            "display": "Upper Back"
+          },
+          {
+            "code": "CXSO:0000025",
+            "display": "Lower Back"
+          },
+          {
+            "code": "CXSO:0000026",
+            "display": "Arms (Upper)"
+          },
+          {
+            "code": "CXSO:0000027",
+            "display": "Forearms"
+          },
+          {
+            "code": "CXSO:0000028",
+            "display": "Hands"
+          },
+          {
+            "code": "CXSO:0000029",
+            "display": "Hips"
+          },
+          {
+            "code": "CXSO:0000030",
+            "display": "Upper Legs / Thighs"
+          },
+          {
+            "code": "CXSO:0000031",
+            "display": "Knees"
+          },
+          {
+            "code": "CXSO:0000032",
+            "display": "Lower Legs / Calves"
+          },
+          {
+            "code": "CXSO:0000033",
+            "display": "Feet"
+          },
+          {
+            "code": "CXSO:0000034",
+            "display": "Pelvic Floor"
+          },
+          {
+            "code": "CXSO:0000035",
+            "display": "Vestibular / Balance"
+          },
+          {
+            "code": "CXSO:0000036",
+            "display": "Heart"
+          },
+          {
+            "code": "CXSO:0000037",
+            "display": "Diaphragm"
+          },
+          {
+            "code": "CXSO:0000038",
+            "display": "Whole Body / Systemic"
+          },
+          {
+            "code": "CXSO:0000039",
+            "display": "Unspecified"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:cxso="https://w3id.org/cxso/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000032">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Lower Legs / Calves</rdfs:label>
+    <skos:prefLabel xml:lang="en">Lower Legs / Calves</skos:prefLabel>
+    <skos:notation>Zone 22</skos:notation>
+    <skos:definition xml:lang="en">Heaviness, restlessness, cramping; grounding connection.</skos:definition>
+    <skos:altLabel xml:lang="en">Lower Legs</skos:altLabel>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0003823"/>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_8480048"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/wholeBody">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete wholeBody</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000038"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000041">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+    <rdfs:label xml:lang="en">Tightness</rdfs:label>
+    <skos:prefLabel xml:lang="en">Tightness</skos:prefLabel>
+    <skos:definition xml:lang="en">Constriction, gripping, clenching. FEAR activation, muscular bracing, suppressed expression. Most commonly reported quality across populations.</skos:definition>
+    <skos:altLabel xml:lang="en">clenching</skos:altLabel>
+    <skos:altLabel xml:lang="en">constriction</skos:altLabel>
+    <skos:altLabel xml:lang="en">gripping</skos:altLabel>
+    <skos:altLabel xml:lang="en">knot</skos:altLabel>
+    <skos:altLabel xml:lang="en">stiffness</skos:altLabel>
+    <skos:altLabel xml:lang="en">tense</skos:altLabel>
+    <skos:altLabel xml:lang="en">tension</skos:altLabel>
+    <skos:altLabel xml:lang="en">tight</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000021">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Solar Plexus</rdfs:label>
+    <skos:prefLabel xml:lang="en">Solar Plexus</skos:prefLabel>
+    <skos:notation>Zone 11</skos:notation>
+    <skos:definition xml:lang="en">Churning, butterflies, knot; core anxiety, diaphragmatic tension.</skos:definition>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0035276"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/SensationQuality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete SensationQuality</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000047">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+    <rdfs:label xml:lang="en">Pain</rdfs:label>
+    <skos:prefLabel xml:lang="en">Pain</skos:prefLabel>
+    <skos:definition xml:lang="en">Sharp, specific, localized nociception. Chronic pain territories, acute somatic distress, body-as-alarm.</skos:definition>
+    <skos:altLabel xml:lang="en">hurting</skos:altLabel>
+    <skos:altLabel xml:lang="en">sharp</skos:altLabel>
+    <skos:altLabel xml:lang="en">stabbing</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/heaviness">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete heaviness</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000048"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/hands">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete hands</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000028"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/tingling">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete tingling</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000045"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/upperBack">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete upperBack</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000024"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000050">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+    <rdfs:label xml:lang="en">Pulsing</rdfs:label>
+    <skos:prefLabel xml:lang="en">Pulsing</skos:prefLabel>
+    <skos:definition xml:lang="en">Rhythmic beat, throbbing. Cardiovascular awareness, autonomic oscillation, activation pattern.</skos:definition>
+    <skos:altLabel xml:lang="en">beating</skos:altLabel>
+    <skos:altLabel xml:lang="en">pounding</skos:altLabel>
+    <skos:altLabel xml:lang="en">throbbing</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/buzzing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete buzzing</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000052"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000056">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+    <rdfs:label xml:lang="en">Stillness</rdfs:label>
+    <skos:prefLabel xml:lang="en">Stillness</skos:prefLabel>
+    <skos:definition xml:lang="en">Calm absence of movement. Living in Shutdown: stillness as arrival, not absence. Living in Existential Confrontation: presence without action. A rare positive signal.</skos:definition>
+    <skos:altLabel xml:lang="en">quiet</skos:altLabel>
+    <skos:altLabel xml:lang="en">settled</skos:altLabel>
+    <skos:altLabel xml:lang="en">still</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000048">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+    <rdfs:label xml:lang="en">Heaviness</rdfs:label>
+    <skos:prefLabel xml:lang="en">Heaviness</skos:prefLabel>
+    <skos:definition xml:lang="en">Weight, density, gravitational pull. SEEKING suppression (Living in Shutdown), fatigue, depressive somatization.</skos:definition>
+    <skos:altLabel xml:lang="en">heavy</skos:altLabel>
+    <skos:altLabel xml:lang="en">leaden</skos:altLabel>
+    <skos:altLabel xml:lang="en">weighed down</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000026">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Arms (Upper)</rdfs:label>
+    <skos:prefLabel xml:lang="en">Arms (Upper)</skos:prefLabel>
+    <skos:notation>Zone 16</skos:notation>
+    <skos:definition xml:lang="en">Heaviness, weakness, restlessness; reaching, holding and pushing gestures.</skos:definition>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0003822"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/hips">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete hips</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000029"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000017">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Neck (Front)</rdfs:label>
+    <skos:prefLabel xml:lang="en">Neck (Front)</skos:prefLabel>
+    <skos:notation>Zone 7</skos:notation>
+    <skos:definition xml:lang="en">Tightness, vulnerability; exposure anxiety.</skos:definition>
+    <skos:broadMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000974"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000042">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+    <rdfs:label xml:lang="en">Heat / Warmth</rdfs:label>
+    <skos:prefLabel xml:lang="en">Heat / Warmth</skos:prefLabel>
+    <skos:definition xml:lang="en">Radiating temperature increase, flushing. RAGE activation, shame response (facial heat), inflammatory processes.</skos:definition>
+    <skos:altLabel xml:lang="en">Heat</skos:altLabel>
+    <skos:altLabel xml:lang="en">burning</skos:altLabel>
+    <skos:altLabel xml:lang="en">facial heat</skos:altLabel>
+    <skos:altLabel xml:lang="en">flushing</skos:altLabel>
+    <skos:altLabel xml:lang="en">hot</skos:altLabel>
+    <skos:altLabel xml:lang="en">warm</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000031">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Knees</rdfs:label>
+    <skos:prefLabel xml:lang="en">Knees</skos:prefLabel>
+    <skos:notation>Zone 21</skos:notation>
+    <skos:definition xml:lang="en">Weakness, instability; structural anxiety. Clinically informative.</skos:definition>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001465"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000023">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Lower Abdomen / Pelvis</rdfs:label>
+    <skos:prefLabel xml:lang="en">Lower Abdomen / Pelvis</skos:prefLabel>
+    <skos:notation>Zone 13</skos:notation>
+    <skos:definition xml:lang="en">Tension, numbness, dissociation; trauma-sensitive zone.</skos:definition>
+    <skos:altLabel xml:lang="en">Lower Abdomen</skos:altLabel>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002355"/>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0013203"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000027">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Forearms</rdfs:label>
+    <skos:prefLabel xml:lang="en">Forearms</skos:prefLabel>
+    <skos:notation>Zone 17</skos:notation>
+    <skos:definition xml:lang="en">Tension, tingling, weakness; action readiness or suppression.</skos:definition>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002386"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000029">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Hips</rdfs:label>
+    <skos:prefLabel xml:lang="en">Hips</skos:prefLabel>
+    <skos:notation>Zone 19</skos:notation>
+    <skos:definition xml:lang="en">Tightness, restriction; mobility, procedural tension patterns.</skos:definition>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001464"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000036">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Heart</rdfs:label>
+    <skos:prefLabel xml:lang="en">Heart</skos:prefLabel>
+    <skos:notation>Zone 26</skos:notation>
+    <skos:definition xml:lang="en">Racing, pounding, skipping; cardiac interoception distinct from chest wall tightness.</skos:definition>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000948"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/zone">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete zone</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000158"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000175">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has evidence kind</rdfs:label>
+    <skos:prefLabel xml:lang="en">has evidence kind</skos:prefLabel>
+    <skos:definition xml:lang="en">The kind of evidence by which a data point was obtained.</skos:definition>
+    <rdfs:domain rdf:resource="https://w3id.org/cxso/CXSO_0000002"/>
+    <rdfs:range rdf:resource="https://w3id.org/cxso/CXSO_0000172"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000045">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+    <rdfs:label xml:lang="en">Tingling</rdfs:label>
+    <skos:prefLabel xml:lang="en">Tingling</skos:prefLabel>
+    <skos:definition xml:lang="en">Fine electrical sensation, pins and needles. Autonomic arousal, hyperventilation, peripheral nervous system activation.</skos:definition>
+    <skos:altLabel xml:lang="en">pins and needles</skos:altLabel>
+    <skos:altLabel xml:lang="en">prickling</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/BodyZone">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete BodyZone</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000010">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/cxso/CXSO_0000001"/>
+    <rdfs:label xml:lang="en">Body Zone</rdfs:label>
+    <skos:prefLabel xml:lang="en">Body Zone</skos:prefLabel>
+    <skos:definition xml:lang="en">An area of the body where a person reports a sensation. A zone is the area a person reports, not a precise anatomical boundary; it is linked to UBERON where a corresponding structure exists.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000180">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000172"/>
+    <rdfs:label xml:lang="en">Noticed by the system</rdfs:label>
+    <skos:prefLabel xml:lang="en">Noticed by the system</skos:prefLabel>
+    <skos:definition xml:lang="en">Obtained as something noticed by the system.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000025">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Lower Back</rdfs:label>
+    <skos:prefLabel xml:lang="en">Lower Back</skos:prefLabel>
+    <skos:notation>Zone 15</skos:notation>
+    <skos:definition xml:lang="en">Aching, tension, weakness; structural support anxiety.</skos:definition>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005462"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000014">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Jaw / TMJ</rdfs:label>
+    <skos:prefLabel xml:lang="en">Jaw / TMJ</skos:prefLabel>
+    <skos:notation>Zone 4</skos:notation>
+    <skos:definition xml:lang="en">Clenching, grinding, tightness; RAGE suppression. Clinically informative.</skos:definition>
+    <skos:altLabel xml:lang="en">Jaw</skos:altLabel>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0003700"/>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0011595"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000057">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+    <rdfs:label xml:lang="en">Expansion</rdfs:label>
+    <skos:prefLabel xml:lang="en">Expansion</skos:prefLabel>
+    <skos:definition xml:lang="en">Outward-radiating warmth, spaciousness. A positive somatic signal, often during successful regulation. Distinct from Heat / Warmth, which has urgency: expansion is spacious.</skos:definition>
+    <skos:altLabel xml:lang="en">opening</skos:altLabel>
+    <skos:altLabel xml:lang="en">spacious</skos:altLabel>
+    <skos:altLabel xml:lang="en">widening</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/upperChest">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete upperChest</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000020"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/core">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dcterms:creator>Justin DeGarbo</dcterms:creator>
+    <dcterms:description xml:lang="en">The CSO core: an observation vocabulary for first-person somatic experience that can be used without any clinical theory. Zones, sensation qualities, intensity, time, evidence kind, and the data point, snapshot and trajectory structure.</dcterms:description>
+    <dcterms:identifier>10.5281/zenodo.18859896</dcterms:identifier>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-29</dcterms:issued>
+    <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-26</dcterms:modified>
+    <dcterms:publisher>Cathexis Health LLC</dcterms:publisher>
+    <dcterms:title xml:lang="en">Cathexis Somatic Ontology (CSO): core</dcterms:title>
+    <vann:preferredNamespacePrefix>cxso</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>https://w3id.org/cxso/</vann:preferredNamespaceUri>
+    <owl:versionIRI rdf:resource="https://w3id.org/cxso/releases/2.0.0/cxso-core.ttl"/>
+    <owl:versionInfo>2.0.0</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000019">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Shoulders</rdfs:label>
+    <skos:prefLabel xml:lang="en">Shoulders</skos:prefLabel>
+    <skos:notation>Zone 9</skos:notation>
+    <skos:definition xml:lang="en">Carrying, tension, elevation; extremely common across territories.</skos:definition>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001467"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/neckFront">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete neckFront</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000017"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/upperArms">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete upperArms</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000026"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000039">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Unspecified</rdfs:label>
+    <skos:prefLabel xml:lang="en">Unspecified</skos:prefLabel>
+    <skos:notation>Zone 29</skos:notation>
+    <skos:definition xml:lang="en">Present but not yet localized. Therapeutically important for people who are developing interoceptive capacity. The ratio of unspecified-to-localized reports over time measures developing body awareness.</skos:definition>
+    <skos:altLabel xml:lang="en">Can't Pinpoint</skos:altLabel>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000044">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+    <rdfs:label xml:lang="en">Pressure</rdfs:label>
+    <skos:prefLabel xml:lang="en">Pressure</skos:prefLabel>
+    <skos:definition xml:lang="en">Compression, weight, bearing down. Overwhelm, suppressed affect, tension accumulation.</skos:definition>
+    <skos:altLabel xml:lang="en">bearing down</skos:altLabel>
+    <skos:altLabel xml:lang="en">compression</skos:altLabel>
+    <skos:altLabel xml:lang="en">fullness</skos:altLabel>
+    <skos:altLabel xml:lang="en">lump</skos:altLabel>
+    <skos:altLabel xml:lang="en">weight on</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/feet">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete feet</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000033"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/hollow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete hollow</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000051"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/SomaticEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete SomaticEntity</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000001"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000011">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Head / Scalp</rdfs:label>
+    <skos:prefLabel xml:lang="en">Head / Scalp</skos:prefLabel>
+    <skos:notation>Zone 1</skos:notation>
+    <skos:definition xml:lang="en">Tension headaches, pressure, cognitive overwhelm.</skos:definition>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000033"/>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000403"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000043">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+    <rdfs:label xml:lang="en">Cold</rdfs:label>
+    <skos:prefLabel xml:lang="en">Cold</skos:prefLabel>
+    <skos:definition xml:lang="en">Temperature decrease, chilling. Dissociative states, withdrawal, circulatory changes in freeze responses.</skos:definition>
+    <skos:altLabel xml:lang="en">chilled</skos:altLabel>
+    <skos:altLabel xml:lang="en">chilly</skos:altLabel>
+    <skos:altLabel xml:lang="en">icy</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/numbness">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete numbness</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000046"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/vestibular">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete vestibular</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000035"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000053">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+    <rdfs:label xml:lang="en">Nausea</rdfs:label>
+    <skos:prefLabel xml:lang="en">Nausea</skos:prefLabel>
+    <skos:definition xml:lang="en">Stomach turning, queasiness. Gut-brain axis distress, disgust, overwhelming affect, medication effects.</skos:definition>
+    <skos:altLabel xml:lang="en">churning</skos:altLabel>
+    <skos:altLabel xml:lang="en">queasy</skos:altLabel>
+    <skos:altLabel xml:lang="en">sick to the stomach</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/pelvicFloor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete pelvicFloor</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000034"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000020">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Upper Chest</rdfs:label>
+    <skos:prefLabel xml:lang="en">Upper Chest</skos:prefLabel>
+    <skos:notation>Zone 10</skos:notation>
+    <skos:definition xml:lang="en">Tightness, pressure, racing; FEAR system activation, cardiac awareness.</skos:definition>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001443"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000018">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Neck (Back)</rdfs:label>
+    <skos:prefLabel xml:lang="en">Neck (Back)</skos:prefLabel>
+    <skos:notation>Zone 8</skos:notation>
+    <skos:definition xml:lang="en">Tension, stiffness, bracing; protective posture.</skos:definition>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0012477"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000179">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000172"/>
+    <rdfs:label xml:lang="en">Done in an intervention</rdfs:label>
+    <skos:prefLabel xml:lang="en">Done in an intervention</skos:prefLabel>
+    <skos:definition xml:lang="en">Obtained as something done in an intervention.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000024">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Upper Back</rdfs:label>
+    <skos:prefLabel xml:lang="en">Upper Back</skos:prefLabel>
+    <skos:notation>Zone 14</skos:notation>
+    <skos:definition xml:lang="en">Tension, aching, bracing; protective posture, chronic guarding.</skos:definition>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0008231"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000217">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has snapshot</rdfs:label>
+    <skos:prefLabel xml:lang="en">has snapshot</skos:prefLabel>
+    <skos:definition xml:lang="en">A snapshot that is part of a trajectory. A trajectory's snapshots are ordered by their timestamps.</skos:definition>
+    <rdfs:domain rdf:resource="https://w3id.org/cxso/CXSO_0000004"/>
+    <rdfs:range rdf:resource="https://w3id.org/cxso/CXSO_0000003"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/nausea">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete nausea</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000053"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/upperLegs">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete upperLegs</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000030"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/vibration">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete vibration</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000055"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/quality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete quality</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000159"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000059">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+    <rdfs:label xml:lang="en">Floating</rdfs:label>
+    <skos:prefLabel xml:lang="en">Floating</skos:prefLabel>
+    <skos:definition xml:lang="en">Untethered, drifting sensation. Living in an Unfamiliar Life: groundlessness. Living Under Siege: dissociative lightness. Distinct from Lightness, which has buoyancy: floating has no anchor.</skos:definition>
+    <skos:altLabel xml:lang="en">drifting</skos:altLabel>
+    <skos:altLabel xml:lang="en">spacey</skos:altLabel>
+    <skos:altLabel xml:lang="en">unanchored</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000038">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Whole Body / Systemic</rdfs:label>
+    <skos:prefLabel xml:lang="en">Whole Body / Systemic</skos:prefLabel>
+    <skos:notation>Zone 28</skos:notation>
+    <skos:definition xml:lang="en">Non-localizable sensations: diffuse fatigue, buzzing, heaviness. Genuinely systemic sensations that forcing localization would misrepresent.</skos:definition>
+    <skos:altLabel xml:lang="en">Whole Body</skos:altLabel>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/mouthLips">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete mouthLips</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000015"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000034">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Pelvic Floor</rdfs:label>
+    <skos:prefLabel xml:lang="en">Pelvic Floor</skos:prefLabel>
+    <skos:notation>Zone 24</skos:notation>
+    <skos:definition xml:lang="en">Deep guarding, tension, numbness; trauma-sensitive, sexual and attachment associations.</skos:definition>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0008612"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000049">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+    <rdfs:label xml:lang="en">Lightness</rdfs:label>
+    <skos:prefLabel xml:lang="en">Lightness</skos:prefLabel>
+    <skos:definition xml:lang="en">Buoyancy, ease. Post-regulation shift, PLAY activation, reduced sympathetic tone.</skos:definition>
+    <skos:altLabel xml:lang="en">buoyant</skos:altLabel>
+    <skos:altLabel xml:lang="en">light</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000158">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">zone</rdfs:label>
+    <skos:prefLabel xml:lang="en">zone</skos:prefLabel>
+    <skos:definition xml:lang="en">The anatomical zone where a sensation was reported.</skos:definition>
+    <rdfs:domain rdf:resource="https://w3id.org/cxso/CXSO_0000002"/>
+    <rdfs:range rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000037">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Diaphragm</rdfs:label>
+    <skos:prefLabel xml:lang="en">Diaphragm</skos:prefLabel>
+    <skos:notation>Zone 27</skos:notation>
+    <skos:definition xml:lang="en">Constriction, catching, restriction; breath holding, autonomic regulation anchor.</skos:definition>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001103"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000012">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Forehead</rdfs:label>
+    <skos:prefLabel xml:lang="en">Forehead</skos:prefLabel>
+    <skos:notation>Zone 2</skos:notation>
+    <skos:definition xml:lang="en">Tension, pressure, furrowing; cognitive strain and worry patterns.</skos:definition>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0008200"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000013">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Eyes</rdfs:label>
+    <skos:prefLabel xml:lang="en">Eyes</skos:prefLabel>
+    <skos:notation>Zone 3</skos:notation>
+    <skos:definition xml:lang="en">Strain, pressure, burning, tears; hypervigilance, crying suppression.</skos:definition>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000970"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/heart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete heart</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000036"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/lowerLegs">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete lowerLegs</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000032"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/cold">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete cold</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000043"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/pain">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete pain</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000047"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000022">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Stomach / Abdomen</rdfs:label>
+    <skos:prefLabel xml:lang="en">Stomach / Abdomen</skos:prefLabel>
+    <skos:notation>Zone 12</skos:notation>
+    <skos:definition xml:lang="en">Nausea, churning, sinking; gut-brain axis, visceral distress.</skos:definition>
+    <skos:altLabel xml:lang="en">Stomach</skos:altLabel>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000916"/>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000945"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000176">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000172"/>
+    <rdfs:label xml:lang="en">Said by the person</rdfs:label>
+    <skos:prefLabel xml:lang="en">Said by the person</skos:prefLabel>
+    <skos:definition xml:lang="en">Obtained as something said by the person.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/neckBack">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete neckBack</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000018"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000052">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+    <rdfs:label xml:lang="en">Buzzing</rdfs:label>
+    <skos:prefLabel xml:lang="en">Buzzing</skos:prefLabel>
+    <skos:definition xml:lang="en">An electrical hum or fizz. Anxiety activation, restlessness, autonomic hyperarousal.</skos:definition>
+    <skos:altLabel xml:lang="en">electric</skos:altLabel>
+    <skos:altLabel xml:lang="en">fizzing</skos:altLabel>
+    <skos:altLabel xml:lang="en">humming</skos:altLabel>
+    <skos:altLabel xml:lang="en">wired</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000054">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+    <rdfs:label xml:lang="en">Aching</rdfs:label>
+    <skos:prefLabel xml:lang="en">Aching</skos:prefLabel>
+    <skos:definition xml:lang="en">Deep, diffuse, persistent discomfort. Chronic tension patterns, grief somatization, sustained stress.</skos:definition>
+    <skos:altLabel xml:lang="en">Ache</skos:altLabel>
+    <skos:altLabel xml:lang="en">dull ache</skos:altLabel>
+    <skos:altLabel xml:lang="en">sore</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000216">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has data point</rdfs:label>
+    <skos:prefLabel xml:lang="en">has data point</skos:prefLabel>
+    <skos:definition xml:lang="en">A data point that is part of a snapshot. A snapshot with nothing stands out set to true has none.</skos:definition>
+    <rdfs:domain rdf:resource="https://w3id.org/cxso/CXSO_0000003"/>
+    <rdfs:range rdf:resource="https://w3id.org/cxso/CXSO_0000002"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/solarPlexus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete solarPlexus</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000021"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000033">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Feet</rdfs:label>
+    <skos:prefLabel xml:lang="en">Feet</skos:prefLabel>
+    <skos:notation>Zone 23</skos:notation>
+    <skos:definition xml:lang="en">Numbness, tingling, groundedness; grounding anchor zone.</skos:definition>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002387"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/zoneNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete zoneNumber</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000166"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/headScalp">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete headScalp</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000011"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/intensity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete intensity</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000163"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nd91cdde053634035a88244c6bc343f4fb1">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <owl:withRestrictions rdf:nodeID="nd91cdde053634035a88244c6bc343f4fb4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/forearms">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete forearms</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000027"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000058">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+    <rdfs:label xml:lang="en">Contraction</rdfs:label>
+    <skos:prefLabel xml:lang="en">Contraction</skos:prefLabel>
+    <skos:definition xml:lang="en">Inward-pulling compression. Withdrawal, bracing, protective narrowing. Living in Disconnection, Living in Shame: pulling inward.</skos:definition>
+    <skos:altLabel xml:lang="en">collapsing inward</skos:altLabel>
+    <skos:altLabel xml:lang="en">pulling in</skos:altLabel>
+    <skos:altLabel xml:lang="en">shrinking</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000177">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000172"/>
+    <rdfs:label xml:lang="en">Measured by an instrument</rdfs:label>
+    <skos:prefLabel xml:lang="en">Measured by an instrument</skos:prefLabel>
+    <skos:definition xml:lang="en">Obtained as a measurement by an instrument.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000060">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+    <rdfs:label xml:lang="en">Trembling</rdfs:label>
+    <skos:prefLabel xml:lang="en">Trembling</skos:prefLabel>
+    <skos:definition xml:lang="en">Fine involuntary shaking, felt or seen as movement. Somatic discharge: can be regulatory (release after activation) or a sign of distress (Living Under Siege freeze-thaw, Living in Overwhelm spillover).</skos:definition>
+    <skos:altLabel xml:lang="en">quivering</skos:altLabel>
+    <skos:altLabel xml:lang="en">shaking</skos:altLabel>
+    <skos:altLabel xml:lang="en">shivering</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/floating">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete floating</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000059"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/expansion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete expansion</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000057"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000166">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">zone number</rdfs:label>
+    <skos:prefLabel xml:lang="en">zone number</skos:prefLabel>
+    <skos:definition xml:lang="en">The number of a zone, from 1 to 29, as used in clinical practice ("Zone 10").</skos:definition>
+    <rdfs:domain rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000030">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Upper Legs / Thighs</rdfs:label>
+    <skos:prefLabel xml:lang="en">Upper Legs / Thighs</skos:prefLabel>
+    <skos:notation>Zone 20</skos:notation>
+    <skos:definition xml:lang="en">Heaviness, tension, restlessness; flight readiness or collapse.</skos:definition>
+    <skos:altLabel xml:lang="en">Upper Legs</skos:altLabel>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000376"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/eyes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete eyes</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000013"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/stillness">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete stillness</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000056"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/SomaticSnapshot">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete SomaticSnapshot</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000003"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/SomaticDataPoint">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete SomaticDataPoint</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000002"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/lightness">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete lightness</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000049"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/shoulders">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete shoulders</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000019"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000015">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Mouth / Lips</rdfs:label>
+    <skos:prefLabel xml:lang="en">Mouth / Lips</skos:prefLabel>
+    <skos:notation>Zone 5</skos:notation>
+    <skos:definition xml:lang="en">Tightness, numbness, trembling; speech suppression, grief expression.</skos:definition>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000165"/>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001833"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000046">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+    <rdfs:label xml:lang="en">Numbness</rdfs:label>
+    <skos:prefLabel xml:lang="en">Numbness</skos:prefLabel>
+    <skos:definition xml:lang="en">Absence of sensation, deadness, blankness. Dissociation, shutdown, protective disconnection from interoceptive signal.</skos:definition>
+    <skos:altLabel xml:lang="en">blank</skos:altLabel>
+    <skos:altLabel xml:lang="en">can't feel it</skos:altLabel>
+    <skos:altLabel xml:lang="en">dead</skos:altLabel>
+    <skos:altLabel xml:lang="en">numb</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000051">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+    <rdfs:label xml:lang="en">Hollowness</rdfs:label>
+    <skos:prefLabel xml:lang="en">Hollowness</skos:prefLabel>
+    <skos:definition xml:lang="en">Emptiness, void, absence of substance. Grief (Living in Loss), existential states (Living in Existential Confrontation), identity emptiness (Living Behind a Mask).</skos:definition>
+    <skos:altLabel xml:lang="en">Hollow</skos:altLabel>
+    <skos:altLabel xml:lang="en">empty</skos:altLabel>
+    <skos:altLabel xml:lang="en">void</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/lowerAbdomen">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete lowerAbdomen</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000023"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000159">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">quality</rdfs:label>
+    <skos:prefLabel xml:lang="en">quality</skos:prefLabel>
+    <skos:definition xml:lang="en">The phenomenological sensation quality reported.</skos:definition>
+    <rdfs:domain rdf:resource="https://w3id.org/cxso/CXSO_0000002"/>
+    <rdfs:range rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/trembling">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete trembling</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000060"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000028">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Hands</rdfs:label>
+    <skos:prefLabel xml:lang="en">Hands</skos:prefLabel>
+    <skos:notation>Zone 18</skos:notation>
+    <skos:definition xml:lang="en">Clenching, tingling, numbness, sweating; highly expressive zone.</skos:definition>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002398"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/tightness">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete tightness</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000041"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nd91cdde053634035a88244c6bc343f4fb2">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nd91cdde053634035a88244c6bc343f4fb5">
+    <rdf:first rdf:nodeID="nd91cdde053634035a88244c6bc343f4fb3"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000040">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/cxso/CXSO_0000001"/>
+    <rdfs:label xml:lang="en">Sensation Quality</rdfs:label>
+    <skos:prefLabel xml:lang="en">Sensation Quality</skos:prefLabel>
+    <skos:definition xml:lang="en">A phenomenological sensation descriptor. Somatic qualities, not emotional labels. Defined phenomenologically (what it feels like) rather than mechanistically (what causes it).</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000002">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/cxso/CXSO_0000001"/>
+    <rdfs:label xml:lang="en">Somatic Data Point</rdfs:label>
+    <skos:prefLabel xml:lang="en">Somatic Data Point</skos:prefLabel>
+    <skos:definition xml:lang="en">A single sensation report: where in the body (zone), what kind (quality), and optionally how intense (a whole number from 0 to 10). The atomic unit of somatic data.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/SomaticTrajectory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete SomaticTrajectory</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000004"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000016">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Throat</rdfs:label>
+    <skos:prefLabel xml:lang="en">Throat</skos:prefLabel>
+    <skos:notation>Zone 6</skos:notation>
+    <skos:definition xml:lang="en">Constriction, lump; suppressed expression across multiple territories.</skos:definition>
+    <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000341"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/throat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete throat</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000016"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/diaphragm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete diaphragm</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000037"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/unspecified">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete unspecified</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000039"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000172">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/cxso/CXSO_0000001"/>
+    <rdfs:label xml:lang="en">Evidence Kind</rdfs:label>
+    <skos:prefLabel xml:lang="en">Evidence Kind</skos:prefLabel>
+    <skos:definition xml:lang="en">How a data point was obtained: said by the person, measured by an instrument, sensed by a device, done in an intervention, or noticed by the system.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000163">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">intensity</rdfs:label>
+    <skos:prefLabel xml:lang="en">intensity</skos:prefLabel>
+    <skos:definition xml:lang="en">An optional whole-number rating of how intense a sensation is, from 0 (not noticeable) to 10 (the most intense the person can imagine). Used on a data point, and optionally on a snapshot for the body state as a whole.</skos:definition>
+    <rdfs:range rdf:nodeID="nd91cdde053634035a88244c6bc343f4fb1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000004">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/cxso/CXSO_0000001"/>
+    <rdfs:label xml:lang="en">Somatic Trajectory</rdfs:label>
+    <skos:prefLabel xml:lang="en">Somatic Trajectory</skos:prefLabel>
+    <skos:definition xml:lang="en">A body state over time: an ordered series of snapshots for one person. Aggregates computed from the series are an implementation concern, not part of the ontology.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000178">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000172"/>
+    <rdfs:label xml:lang="en">Sensed by a device</rdfs:label>
+    <skos:prefLabel xml:lang="en">Sensed by a device</skos:prefLabel>
+    <skos:definition xml:lang="en">Obtained as something sensed by a device.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/jaw">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete jaw</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000014"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/forehead">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete forehead</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000012"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/lowerBack">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete lowerBack</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000025"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000174">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">timestamp</rdfs:label>
+    <skos:prefLabel xml:lang="en">timestamp</skos:prefLabel>
+    <skos:definition xml:lang="en">The time of a somatic snapshot.</skos:definition>
+    <rdfs:domain rdf:resource="https://w3id.org/cxso/CXSO_0000003"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/ache">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete ache</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000054"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/stomach">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete stomach</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000022"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/pulsing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete pulsing</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000050"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000173">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">nothing stands out</rdfs:label>
+    <skos:prefLabel xml:lang="en">nothing stands out</skos:prefLabel>
+    <skos:definition xml:lang="en">The person attended to their sensations and found nothing standing out. This is a report, distinct from the Numbness quality (a felt absence of sensation) and from a snapshot never taken.</skos:definition>
+    <rdfs:domain rdf:resource="https://w3id.org/cxso/CXSO_0000003"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000055">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000040"/>
+    <rdfs:label xml:lang="en">Vibration</rdfs:label>
+    <skos:prefLabel xml:lang="en">Vibration</skos:prefLabel>
+    <skos:definition xml:lang="en">An inner oscillation felt through a zone, without visible movement. High activation, trauma-related activation, release of accumulated tension.</skos:definition>
+    <skos:altLabel xml:lang="en">thrumming</skos:altLabel>
+    <skos:altLabel xml:lang="en">vibrating</skos:altLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/pressure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete pressure</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000044"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000035">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://w3id.org/cxso/CXSO_0000010"/>
+    <rdfs:label xml:lang="en">Vestibular / Balance</rdfs:label>
+    <skos:prefLabel xml:lang="en">Vestibular / Balance</skos:prefLabel>
+    <skos:notation>Zone 25</skos:notation>
+    <skos:definition xml:lang="en">Dizziness, unsteadiness, groundlessness; dissociative and transition states.</skos:definition>
+    <skos:relatedMatch rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004681"/>
+    <cxso:CXSO_0000166 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</cxso:CXSO_0000166>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/heat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete heat</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000042"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/contraction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete contraction</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000058"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000001">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Somatic Entity</rdfs:label>
+    <skos:prefLabel xml:lang="en">Somatic Entity</skos:prefLabel>
+    <skos:definition xml:lang="en">The root class for every entity in the Cathexis Somatic Ontology.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cathexis.health/ontology/cso/v1.1/knees">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:label xml:lang="en">obsolete knees</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="https://w3id.org/cxso/CXSO_0000031"/>
+    <skos:historyNote xml:lang="en">Identifier from CSO v1.1. Replaced by a permanent code at release 2.0.0.</skos:historyNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nd91cdde053634035a88244c6bc343f4fb4">
+    <rdf:first rdf:nodeID="nd91cdde053634035a88244c6bc343f4fb2"/>
+    <rdf:rest rdf:nodeID="nd91cdde053634035a88244c6bc343f4fb5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/cxso/CXSO_0000003">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/cxso/CXSO_0000001"/>
+    <rdfs:label xml:lang="en">Somatic Snapshot</rdfs:label>
+    <skos:prefLabel xml:lang="en">Somatic Snapshot</skos:prefLabel>
+    <skos:definition xml:lang="en">A complete body state at a single moment. It holds zero or more data points; with none, nothing stands out may record that the person attended to their sensations and found nothing standing out.</skos:definition>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="nd91cdde053634035a88244c6bc343f4fb3">
+    <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxInclusive>
+  </rdf:Description>
+</rdf:RDF>

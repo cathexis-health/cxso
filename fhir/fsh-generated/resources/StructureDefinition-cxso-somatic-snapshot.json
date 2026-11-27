@@ -1,0 +1,208 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cxso-somatic-snapshot",
+  "url": "https://w3id.org/cxso/fhir/StructureDefinition/cxso-somatic-snapshot",
+  "version": "2.0.0",
+  "name": "CXSOSomaticSnapshot",
+  "title": "CSO somatic snapshot",
+  "status": "active",
+  "description": "A complete body state at one moment in the Cathexis Somatic Ontology. It groups its data points through hasMember, or records that nothing stood out. Release 2.0.0.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "constraint": [
+          {
+            "key": "cxso-snapshot-content",
+            "severity": "error",
+            "human": "A snapshot holds at least one data point, or records that nothing stands out.",
+            "expression": "hasMember.exists() or component.where(code.coding.exists(system = 'https://w3id.org/cxso' and code = 'CXSO:0000173')).value.ofType(boolean).where($this = true).exists()",
+            "source": "https://w3id.org/cxso/fhir/StructureDefinition/cxso-somatic-snapshot"
+          },
+          {
+            "key": "cxso-snapshot-nothing",
+            "severity": "error",
+            "human": "A snapshot that records nothing stands out holds no data points.",
+            "expression": "component.where(code.coding.exists(system = 'https://w3id.org/cxso' and code = 'CXSO:0000173')).value.ofType(boolean).where($this = true).exists() implies hasMember.empty()",
+            "source": "https://w3id.org/cxso/fhir/StructureDefinition/cxso-somatic-snapshot"
+          }
+        ]
+      },
+      {
+        "id": "Observation.status",
+        "path": "Observation.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.category:survey",
+        "path": "Observation.category",
+        "sliceName": "survey",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "survey",
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "CXSO:0000003",
+              "system": "https://w3id.org/cxso",
+              "display": "Somatic Snapshot"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://w3id.org/cxso/fhir/StructureDefinition/cxso-somatic-data-point"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "code"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Observation.component:nothingStandsOut",
+        "path": "Observation.component",
+        "sliceName": "nothingStandsOut",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:nothingStandsOut.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "CXSO:0000173",
+              "system": "https://w3id.org/cxso",
+              "display": "nothing stands out"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:nothingStandsOut.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:intensity",
+        "path": "Observation.component",
+        "sliceName": "intensity",
+        "short": "Intensity of the body state as a whole",
+        "min": 0,
+        "max": "1",
+        "constraint": [
+          {
+            "key": "cxso-intensity",
+            "severity": "error",
+            "human": "Intensity is a whole number from 0 to 10.",
+            "expression": "value.ofType(integer).all($this >= 0 and $this <= 10)",
+            "source": "https://w3id.org/cxso/fhir/StructureDefinition/cxso-somatic-snapshot"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:intensity.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "CXSO:0000163",
+              "system": "https://w3id.org/cxso",
+              "display": "intensity"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:intensity.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "integer"
+          }
+        ]
+      }
+    ]
+  }
+}
