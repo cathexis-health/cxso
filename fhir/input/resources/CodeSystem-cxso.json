@@ -21,7 +21,7 @@
     }
   ],
   "copyright": "Cathexis Somatic Ontology (CSO), release 2.0.0. Justin DeGarbo / Cathexis Health LLC. CC BY 4.0: https://creativecommons.org/licenses/by/4.0/",
-  "description": "The CSO's permanent codes for first-person somatic experience: zones, sensation qualities, evidence kinds, the clinical extension's terms, and the classes and properties that structure a report. Codes carry no meaning and are never reused. Generated from cxso.ttl.",
+  "description": "The CSO's permanent codes for first-person somatic experience: zones, sensation qualities, evidence kinds, the clinical extension's terms, and the classes and properties that structure a report. Codes carry no meaning and are never reused. A code is written CXSO:0000020; its address is https://w3id.org/cxso/CXSO_0000020. The vocabulary has not yet been validated empirically (see the paper, section 10.2). Generated from cxso.ttl.",
   "caseSensitive": true,
   "hierarchyMeaning": "grouped-by",
   "content": "complete",
